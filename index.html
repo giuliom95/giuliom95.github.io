@@ -3,6 +3,16 @@
 		<title>Giulio Martella</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript">
+			function onAboutClick() {
+				aboutElem = document.getElementById('about');
+				aboutElem.style.visibility = 'hidden';
+				videoElem = document.getElementById('video');
+				videoElem.style.visibility = 'visible';
+				videoElem.play();
+				
+			}
+		</script>
 	</head>
 	<body>
 		<div class="content">
@@ -22,10 +32,19 @@
 				</a>
 			</div>
 			<div>
-				<video width="800" height="450" controls>
+				<video width="1000" height="563" id="video" controls>
 					<source src="reel_jan2017.mp4" type="video/mp4">
 					NOT SUPPORTED
 				</video>
+			</div>
+			<div id="about">
+				<span>About</span>
+				<p>
+					Velit placeat sapiente tempora dolorum voluptatem corrupti rerum. Perspiciatis enim voluptas ex quos omnis excepturi. Et ut animi quam. Consequatur repellat architecto id asperiores. Sapiente veritatis odio velit qui adipisci.
+					Itaque porro eum reprehenderit et eaque in rem. Voluptas possimus maiores temporibus hic. Quaerat autem nemo sit facere. Rerum est voluptas velit aut repudiandae fuga quaerat sunt.
+					Itaque sed aliquam facere. Inventore non quisquam est itaque accusantium. Aliquam nihil at incidunt qui optio. Atque magni soluta tempora.
+				</p>
+				<a href="javascript:void(0)" onclick="onAboutClick()">See the reel...</a>
 			</div>
 		</div>
 	</body>

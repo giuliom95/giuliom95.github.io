@@ -16,7 +16,7 @@ body {
 
 .content {
     margin: auto;
-    width: 800px;
+    width: 1000px;
     margin-top: 50px;
     background-color: white;
 
@@ -56,4 +56,31 @@ body {
 .logos a {
     text-decoration: none;
     color: black;
+}
+
+#video {
+    visibility: hidden;
+}
+
+#about {
+    margin-top: -563px;
+    height: 503px;
+    background: black;
+    color: white;
+    padding: 30px;
+    font-size: 18px;
+}
+
+#about span {
+    font-size: 35px;
+}
+
+#about p {
+    margin-top: 0px;
+}
+
+#about a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
