@@ -19,6 +19,10 @@ body {
     box-shadow: 4px 4px 4px #222;
 }
 
+.title {
+    float: left;
+}
+
 .name {
     font-size: 50px;
     font-weight: 500;
@@ -32,4 +36,20 @@ body {
     margin-top: -3px;
     padding-left: 30px;
     padding-bottom: 30px;
+}
+
+.logos {
+    float: right;
+    padding: 30px;
+    padding-top: 42px;
+}
+
+.logos img {
+    width: 40px;
+    margin-left: 4px;
+}
+
+.logos a {
+    text-decoration: none;
+    color: black;
 }
