@@ -58,7 +58,7 @@ body {
 
 .logos a {
     text-decoration: none;
-    color: black;
+    color: #0D0D0D;
 }
 
 #video {
@@ -67,19 +67,22 @@ body {
 
 #about {
     margin-top: -563px;
-    height: 503px;
-    background: black;
+    height: 323px;
+    background: #0D0D0D;
     color: white;
-    padding: 30px;
+    padding: 100px;
+    padding-top: 140px;
     font-size: 18px;
+    text-align: center;
 }
 
-#about span {
+#about div {
     font-size: 35px;
 }
 
 #about p {
     margin-top: 0px;
+    font-weight: 300;
 }
 
 #about a {
