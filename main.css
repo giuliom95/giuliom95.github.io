@@ -43,7 +43,7 @@ body {
 }
 
 .desc {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 300;
     margin-top: -3px;
     padding-left: 30px;
@@ -91,7 +91,7 @@ body {
 #about {
     height: 100%;
     margin-top: -563px; 
-    background: #0D0D0D;
+    background-image: url('./aboutbg.png');
     color: white;
     padding: 100px;
     padding-top: 140px;
