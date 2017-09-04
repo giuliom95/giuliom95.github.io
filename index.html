@@ -3,72 +3,8 @@
 		<title>Giulio Martella</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="main.css">
-		<script type="text/javascript">
-			function switchReel() {
-				aboutElem = document.getElementById('about');
-				videoElem = document.getElementById('reel');
-				backElem = document.getElementById('backButton');
-
-				if(
-					aboutElem.style.visibility == '' ||
-					aboutElem.style.visibility == 'visible'
-				) {
-					aboutElem.style.visibility = 'hidden';
-					videoElem.style.visibility = 'visible';
-					backElem.style.visibility = 'visible';
-
-					videoElem.play();
-				} else {
-					aboutElem.style.visibility = 'visible';
-					videoElem.style.visibility = 'hidden';
-					backElem.style.visibility = 'hidden';
-
-					videoElem.pause();
-					videoElem.fastSeek(0);
-				}
-			}
-		</script>
 	</head>
 	<body>
-		<div class="background"></div>
-		<div class="content">
-			<div class="upper">
-				<div class="title">
-					<div class="name">Giulio Martella</div>
-					<div class="desc">Research fellow @ Computational Visual Design Laboratory of Roma Tre University</div>
-				</div>
-				<div class="logos">
-					<a href="https://github.com/giuliom95">
-						<img src="./github.svg">
-					</a>
-					<a href="https://www.linkedin.com/in/giulio-martella-71a582123/">
-						<img src="./linkedin.svg">
-					</a>
-					<a href="https://twitter.com/giuliom_95">
-						<img src="./twitter.svg">
-					</a>
-				</div>
-			</div>
-			<div class="lower">
-				<div id="backButton">
-					<a href="javascript:void(0)" onclick="switchReel()">&#171; back</a>
-				</div>
-				<div>
-					<video width="1000" height="563" id="reel" preload="auto" controls>
-						<source src="reel_jan2017.mp4" type="video/mp4">
-						NOT SUPPORTED
-					</video>
-				</div>
-				<div id="about">
-					<div>About me</div>
-					<p>
-						Velit placeat sapiente tempora dolorum voluptatem corrupti rerum. Perspiciatis enim voluptas ex quos omnis excepturi. Et ut animi quam. Consequatur repellat architecto id asperiores. Sapiente veritatis odio velit qui adipisci.
-						Itaque porro eum reprehenderit et eaque in rem. Voluptas possimus maiores temporibus hic. Quaerat autem nemo sit facere. Rerum est voluptas velit aut repudiandae fuga quaerat sunt.
-						Itaque sed aliquam facere. Inventore non quisquam est itaque accusantium. Aliquam nihil at incidunt qui optio. Atque magni soluta tempora.
-					</p>
-					<a href="javascript:void(0)" onclick="switchReel()">Watch the reel...</a>
-				</div>
-			</div>
-		</div>
+		<div>Work in progress</div>
 	</body>
 </html>
