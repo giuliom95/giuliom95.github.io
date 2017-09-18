@@ -82,7 +82,11 @@ body {
 	font-weight: 400;
 }
 
-.projectContainer:after {
+.projectContainer .column {
+	float: left;
+}
+
+.projectContainer::after {
 	content:'';
 	display: block;
 	clear: both;
@@ -91,16 +95,19 @@ body {
 .project {
 	color: #0D0D0D;
 	background-color: white;
-	padding: 10px;
 	margin: 10px;
 	width: 279px;
 	border-radius: 3px;
 	font-size: 16px;
-	float: left;
 }
 
-.project span {
+.project .title {
 	font-weight: 500;
+}
+
+.project div {
+	padding: 10px;
+	clear: both;
 }
 
 .project a {
