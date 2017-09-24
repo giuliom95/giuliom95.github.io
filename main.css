@@ -75,6 +75,11 @@ body {
 	text-align: center;
 }
 
+#about p {
+	margin: 0px;
+	margin-bottom: 8px;
+}
+
 .projectContainer{
 	background-image: url('./transparency.png');
 	padding: 20px;
