@@ -1,11 +1,133 @@
-body {
-    width: 100%;
+html {
+	margin: 0;
 }
 
-div {
-    margin: auto;
-    font-size: 50px;
-    font-weight: 500;
-    width: 425px;
-    font-family: 'Montserrat', sans-serif;
+body {
+	width: 100%;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	color: white;
+}
+
+.background {
+	left: 0;
+	position: fixed;
+	right: 0;
+	height: 100%;
+	background-image:
+    linear-gradient(to top left, #29508b, #a23b3f);
+	background-size: cover;
+	top: 0px;
+	z-index: -1;
+}
+
+.content {
+	margin: auto;
+	width: 999px;
+	margin-top: 50px;
+}
+
+.header {
+	background-color: white;
+	color: #0D0D0D;
+	height: 141px;
+}
+
+.title {
+	float: left;
+}
+
+.name {
+	font-size: 50px;
+	font-weight: 500;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+.desc {
+	font-size: 16px;
+	margin-top: -3px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+}
+
+.logos {
+	float: right;
+	padding: 30px;
+	padding-top: 42px;
+}
+
+.logos img {
+	width: 40px;
+	margin-left: 4px;
+}
+
+.logos a {
+	text-decoration: none;
+	color: #0D0D0D;
+}
+
+#about {
+	background-image: url('./transparency.png');
+	padding: 60px;
+	font-size: 18px;
+	text-align: center;
+}
+
+#about a {
+	color: white;
+}
+
+#about p {
+	margin: 0px;
+	margin-bottom: 8px;
+}
+
+.projectContainer{
+	background-image: url('./transparency.png');
+	padding: 20px;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.projectContainer .column {
+	float: left;
+}
+
+.projectContainer .separator {
+	float: left;
+	padding: 10px;
+}
+
+.projectContainer::after {
+	content:'';
+	display: block;
+	clear: both;
+}
+
+.project {
+	color: #0D0D0D;
+	background-color: white;
+	margin-top: 10px;
+	width: 306px;
+	border-radius: 3px;
+	font-size: 16px;
+}
+
+.project .title {
+	font-weight: 500;
+}
+
+.project div {
+	padding: 10px;
+	clear: both;
+}
+
+.project a {
+	color: #0D0D0D;
+}
+
+#footer {
+	padding-bottom: 100px;
 }
