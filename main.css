@@ -75,6 +75,10 @@ body {
 	text-align: center;
 }
 
+#about a {
+	color: white;
+}
+
 #about p {
 	margin: 0px;
 	margin-bottom: 8px;
