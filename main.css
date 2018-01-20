@@ -82,7 +82,17 @@ body {
 	margin-bottom: 8px;
 }
 
-.projectContainer{
+.projectsHeader {
+	background-color: var(--shallow-color);
+	border-top: 1px dashed;
+	text-align: center;
+	padding: 15px;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+
+.projectContainer {
 	background-color: var(--shallow-color);
 	border-bottom: 1px dashed;
 }
