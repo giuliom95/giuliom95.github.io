@@ -1,3 +1,8 @@
+:root {
+	--deep-color: #000022;
+	--shallow-color: white;
+}
+
 html {
 	margin: 0;
 }
@@ -7,7 +12,7 @@ body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
-	color: white;
+	color: var(--deep-color);
 }
 
 .background {
@@ -15,8 +20,7 @@ body {
 	position: fixed;
 	right: 0;
 	height: 100%;
-	background-image:
-    linear-gradient(to top left, #29508b, #a23b3f);
+	background-color: var(--deep-color);
 	background-size: cover;
 	top: 0px;
 	z-index: -1;
@@ -24,14 +28,15 @@ body {
 
 .content {
 	margin: auto;
-	width: 999px;
+	width: 998px;
 	margin-top: 50px;
 }
 
 .header {
-	background-color: white;
-	color: #0D0D0D;
-	height: 141px;
+	background-color: var(--shallow-color);
+	height: 130px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 
 .title {
@@ -42,14 +47,7 @@ body {
 	font-size: 50px;
 	font-weight: 500;
 	padding-left: 30px;
-	padding-top: 30px;
-}
-
-.desc {
-	font-size: 16px;
-	margin-top: -3px;
-	padding-left: 30px;
-	padding-bottom: 30px;
+	padding-top: 33px;
 }
 
 .logos {
@@ -65,18 +63,20 @@ body {
 
 .logos a {
 	text-decoration: none;
-	color: #0D0D0D;
 }
 
 #about {
-	background-image: url('./transparency.png');
+	color: var(--deep-color);
+	background-color: var(--shallow-color);
 	padding: 60px;
+	border-top: 1px dashed;
+	border-bottom: 1px dashed;
 	font-size: 18px;
 	text-align: center;
 }
 
 #about a {
-	color: white;
+	color: var(--deep-color);
 }
 
 #about p {
@@ -85,19 +85,13 @@ body {
 }
 
 .projectContainer{
-	background-image: url('./transparency.png');
-	padding: 20px;
-	font-size: 24px;
-	font-weight: 400;
+	font-weight: 300;
+	background-color: var(--shallow-color);
+	border-bottom: 1px dashed;
 }
 
 .projectContainer .column {
 	float: left;
-}
-
-.projectContainer .separator {
-	float: left;
-	padding: 10px;
 }
 
 .projectContainer::after {
@@ -107,13 +101,19 @@ body {
 }
 
 .project {
-	color: #0D0D0D;
-	background-color: white;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	width: 306px;
-	border-radius: 3px;
+	width: 332px;
 	font-size: 16px;
+	border-bottom: 1px dashed;
+}
+
+.lastProject {
+	border: none;
+}
+
+.centerColumn {
+	border-left: 1px dashed;
+	border-right: 1px dashed;
+	height: 1007px;
 }
 
 .project .title {
@@ -126,9 +126,13 @@ body {
 }
 
 .project a {
-	color: #0D0D0D;
+	color: var(--deep-color);
 }
 
 #footer {
-	padding-bottom: 100px;
+	height: 50px;
+	background-color: var(--shallow-color);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin-bottom: 100px;
 }
