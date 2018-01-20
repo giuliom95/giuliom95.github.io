@@ -1,6 +1,7 @@
 :root {
 	--deep-color: #000022;
 	--shallow-color: white;
+	--bg-color: #ddd;
 }
 
 html {
@@ -20,7 +21,7 @@ body {
 	position: fixed;
 	right: 0;
 	height: 100%;
-	background-color: var(--deep-color);
+	background-color: var(--bg-color);
 	background-size: cover;
 	top: 0px;
 	z-index: -1;
@@ -28,7 +29,7 @@ body {
 
 .content {
 	margin: auto;
-	width: 998px;
+	width: 1000px;
 	margin-top: 50px;
 }
 
@@ -68,9 +69,11 @@ body {
 	color: var(--deep-color);
 	background-color: var(--shallow-color);
 	padding: 60px;
-	border-top: 1px dashed;
+	padding-top: 20px;
 	font-size: 18px;
 	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 #about a {
@@ -82,23 +85,12 @@ body {
 	margin-bottom: 8px;
 }
 
-.projectsHeader {
-	background-color: var(--shallow-color);
-	border-top: 1px dashed;
-	text-align: center;
-	padding: 15px;
-	font-size: 20px;
-	font-weight: 400;
-}
-
-
-.projectContainer {
-	background-color: var(--shallow-color);
-	border-bottom: 1px dashed;
-}
-
 .projectContainer .column {
 	float: left;
+}
+
+.projectContainer .rightColumn {
+	margin-right: 30px;
 }
 
 .projectContainer::after {
@@ -108,15 +100,11 @@ body {
 }
 
 .project {
-	width: 332px;
+	width: 484px;
 	font-size: 16px;
-	border-top: 1px dashed;
-}
-
-.centerColumn {
-	border-left: 1px dashed;
-	border-right: 1px dashed;
-	height: 1007px;
+	background-color: var(--shallow-color);
+	margin-top: 30px;
+	border-radius: 5px;
 }
 
 .project .title {
@@ -124,15 +112,15 @@ body {
 }
 
 .project img {
-	border-radius: 3px;
-	margin-left: 10px;
-    width: 312px;
+	width: 454px;
+	margin-left: 15px;
+	border-radius: 5px;
 }
 
 .project video {
-	border-radius: 3px;
-	margin-left: 10px;
-    width: 312px;
+	width: 454px;
+	margin-left: 15px;
+	border-radius: 5px;
 }
 
 .project div {
@@ -145,9 +133,5 @@ body {
 }
 
 #footer {
-	height: 50px;
-	background-color: var(--shallow-color);
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
 	margin-bottom: 100px;
 }
