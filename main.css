@@ -30,7 +30,9 @@ body {
 .content {
 	margin: auto;
 	width: 1000px;
-	margin-top: 50px;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .header {
