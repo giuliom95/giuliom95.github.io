@@ -45,7 +45,6 @@ body {
 
 .name {
 	font-size: 50px;
-	font-weight: 500;
 	padding-left: 30px;
 	padding-top: 33px;
 }
@@ -85,7 +84,6 @@ body {
 }
 
 .projectContainer{
-	font-weight: 300;
 	background-color: var(--shallow-color);
 	border-bottom: 1px dashed;
 }
@@ -117,7 +115,7 @@ body {
 }
 
 .project .title {
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .project div {
