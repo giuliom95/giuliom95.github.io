@@ -69,7 +69,6 @@ body {
 	background-color: var(--shallow-color);
 	padding: 60px;
 	border-top: 1px dashed;
-	border-bottom: 1px dashed;
 	font-size: 18px;
 	text-align: center;
 }
@@ -101,11 +100,7 @@ body {
 .project {
 	width: 332px;
 	font-size: 16px;
-	border-bottom: 1px dashed;
-}
-
-.lastProject {
-	border: none;
+	border-top: 1px dashed;
 }
 
 .centerColumn {
@@ -116,6 +111,18 @@ body {
 
 .project .title {
 	font-weight: 400;
+}
+
+.project img {
+	border-radius: 3px;
+	margin-left: 10px;
+    width: 312px;
+}
+
+.project video {
+	border-radius: 3px;
+	margin-left: 10px;
+    width: 312px;
 }
 
 .project div {
