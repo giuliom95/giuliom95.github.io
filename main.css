@@ -119,10 +119,30 @@ body {
 	border-radius: 5px;
 }
 
-.project video {
+.project .videoBox {
 	width: 460px;
 	margin-left: 15px;
+	margin-bottom: -4px;
+	padding: 0px;
+}
+
+.project video {
+	width: 100%;
 	border-radius: 5px;
+}
+
+.project .playButton {
+	position: absolute;
+	margin: 0px;
+	margin-top: -265px;
+	margin-left: 200px;
+	padding: 0px;
+	width: 60px;
+}
+
+.project .playButton img {
+	margin: 0px;
+	width: 100%;
 }
 
 .project div {
@@ -132,6 +152,9 @@ body {
 
 .project a {
 	color: var(--deep-color);
+	margin: 0px;
+	padding: 0px;
+	border: none;
 }
 
 #footer {

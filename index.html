@@ -3,6 +3,19 @@
 		<title>Giulio Martella</title>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="main.css">
+		<script> 
+			function playPause(videoId, buttonId) { 
+				var video = document.getElementById(videoId);
+				var button = document.getElementById(buttonId);
+				if (video.paused) {
+					video.play();
+					button.hidden = true;
+				} else {
+					video.pause();
+					button.hidden = false;
+				}
+			} 
+		</script>
 	</head>
 	<body>
 		<div class="background"></div>
@@ -86,10 +99,15 @@
 				<div class="column">
 					<div class="project">
 						<div class="title">Happy Cactus</div>
-						<video controls loop>
-							<source src="https://video.twimg.com/tweet_video/C_KyZmmXgAEfv7t.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video> 
+						<div class="videoBox">
+							<a href="javascript:void(0)" onclick="playPause('cactus', 'cactusBtn')">
+								<video loop id="cactus">
+									<source src="https://video.twimg.com/tweet_video/C_KyZmmXgAEfv7t.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video> 
+								<div id="cactusBtn" class="playButton"><img src="./play.svg"></div>
+							</a>
+						</div>
 						<div>
 							<a href="https://twitter.com/giuliom_95/status/860947190302339073">Tweet #1</a> -
 							<a href="https://twitter.com/giuliom_95/status/860242784174972930">Tweet #2</a> -
@@ -97,7 +115,7 @@
 						</div>
 					</div>
 
-					<div class="project lastProject">
+					<div class="project">
 						<div class="title">maya-stripes</div>
 						<img src="./projects/stripes.jpg">
 						<div>
@@ -112,10 +130,15 @@
 
 					<div class="project">
 						<div class="title">arduino-maya</div>
-						<video controls loop>
-							<source src="./projects/bunny.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video> 
+						<div class="videoBox">
+							<a href="javascript:void(0)" onclick="playPause('arduino', 'arduinoBtn')">
+								<video loop id="arduino">
+									<source src="./projects/bunny.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+								<div id="arduinoBtn" class="playButton"><img src="./play.svg"></div>
+							</a>
+						</div>
 						<div>
 							Software to make an Arduino board and a Maya session communicate.
 							This can be particularly useful to create custom input devices.
