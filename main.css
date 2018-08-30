@@ -120,6 +120,12 @@ body {
 	border-radius: 5px;
 }
 
+.project iframe {
+	width: 460px;
+	margin-left: 15px;
+	border-radius: 5px;
+}
+
 .project .videoBox {
 	width: 460px;
 	margin-left: 15px;
