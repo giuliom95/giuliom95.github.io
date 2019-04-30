@@ -71,6 +71,25 @@
 
 				<div class="column leftColumn">
 					<div class="project">
+						<div class="title">Instant Radiosity</div>
+						<img src="./projects/istant_radiosity.jpg">
+						<div>
+							Modern interactive implementation of the 
+							<a href="https://kluedo.ub.uni-kl.de/files/4963/Keller_Instant%20radiosity.pdf">1997 "Instant Radiosity" paper</a> 
+							I did as final project for the "Practical Course in Visual Computing" at the University of Stuttgart.
+							It uses <a href="https://www.vis.uni-stuttgart.de/projekte/ogl4core-framework">"OGL4Core Framework"</a>, 
+							an educational tool developed at the University which offers an easy interface to some OpenGL 4 functionalities.
+						</div>
+						<div>
+							A Naive Full Monte Carlo Path Tracer on a Compute Shader is used to displace the Virtual Point Lights.
+							Each VPL has its own shadow map stored into a cubemap texture array. Every shadow map is generated in just one render pass.
+						</div>
+						<div>
+							<a href="https://twitter.com/giuliom95/status/1094718338025046018">Tweet</a>
+						</div>
+					</div>
+
+					<div class="project">
 						<div class="title">ExrViz</div>
 						<img src="./projects/exrviz.jpg">
 						<div>
