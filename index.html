@@ -27,7 +27,6 @@
 		</script>
 	</head>
 	<body>
-		<div class="background"></div>
 		<div class="content">
 			<div class="header">
 				<div class="title">
@@ -76,177 +75,231 @@
 
 				<div class="column leftColumn">
 					<div class="project">
-						<div class="title">Instant Radiosity</div>
-						<img src="./projects/istant_radiosity.jpg">
-						<div>
-							Modern interactive implementation of the 
-							<a href="https://kluedo.ub.uni-kl.de/files/4963/Keller_Instant%20radiosity.pdf">1997 "Instant Radiosity" paper</a> 
-							I did as final project for the "Practical Course in Visual Computing" at the University of Stuttgart.
-							It uses <a href="https://www.vis.uni-stuttgart.de/projekte/ogl4core-framework">"OGL4Core Framework"</a>, 
-							an educational tool developed at the University which offers an easy interface to some OpenGL 4 functionalities.
+						<div class="image">
+							<img src="./projects/istant_radiosity.jpg">
 						</div>
-						<div>
-							A Naive Full Monte Carlo Path Tracer on a Compute Shader is used to displace the Virtual Point Lights.
-							Each VPL has its own shadow map stored into a cubemap texture array. Every shadow map is generated in just one render pass.
+						<div class="text">
+							<div class="title">Instant Radiosity</div>
+							<div>
+								Modern interactive implementation of the 
+								<a href="https://kluedo.ub.uni-kl.de/files/4963/Keller_Instant%20radiosity.pdf">1997 "Instant Radiosity" paper</a> 
+								I did as final project for the "Practical Course in Visual Computing" at the University of Stuttgart.
+								It uses <a href="https://www.vis.uni-stuttgart.de/projekte/ogl4core-framework">"OGL4Core Framework"</a>, 
+								an educational tool developed at the University which offers an easy interface to some OpenGL 4 functionalities.
+							</div>
+							<div>
+								A Naive Full Monte Carlo Path Tracer on a Compute Shader is used to displace the Virtual Point Lights.
+								Each VPL has its own shadow map stored into a cubemap texture array. Every shadow map is generated in just one render pass.
+							</div>
+							<div>
+								<a href="https://twitter.com/giuliom95/status/1094718338025046018">Tweet</a>
+							</div>
 						</div>
-						<div>
-							<a href="https://twitter.com/giuliom95/status/1094718338025046018">Tweet</a>
+					</div>
+				
+					<div class="project">
+						<div class="image">
+							<img src="./projects/exrviz.jpg">
+						</div>
+						<div class="text">
+							<div class="title">ExrViz</div>
+							<div>
+								An OpenEXR visualizer I wrote in C++ and Qt5. I use this to debug renders.
+							</div>
+							<div>
+								<a href="https://gitlab.com/giuliom95/exrviz">Project page</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="project">
-						<div class="title">ExrViz</div>
-						<img src="./projects/exrviz.jpg">
-						<div>
-							An OpenEXR visualizer I wrote in C++ and Qt5. I use this to debug renders.
+						<div class="image">
+							<img src="./projects/lar.jpg">
 						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/exrviz">Project page</a>
-						</div>
-					</div>
-
-					<div class="project">
-						<div class="title">Bachelor thesis</div>
-						<img src="./projects/lar.jpg">
-						<div>
-							A <a href="https://julialang.org/">Julia</a> implementation of a
-							sperimental geometric kernel capable of boolean operations on very complex
-							3D models. The system is based on 
-							<a href="http://paoluzzi.dia.uniroma3.it/web/pao/doc/gpm13-final.pdf">LAR</a>.
-							This is the result of my work at the 
-							<a href="https://github.com/cvdlab/">Computational Visual Design Laboratory</a>
-							of Roma Tre University.
-						</div>
-						<div>
-							<a href="https://github.com/cvdlab/LARLIB.jl">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/924692912453152772">Tweet</a>
+						<div class="text">
+							<div class="title">Bachelor thesis</div>
+							<div>
+								A <a href="https://julialang.org/">Julia</a> implementation of a
+								sperimental geometric kernel capable of boolean operations on very complex
+								3D models. The system is based on 
+								<a href="http://paoluzzi.dia.uniroma3.it/web/pao/doc/gpm13-final.pdf">LAR</a>.
+								This is the result of my work at the 
+								<a href="https://github.com/cvdlab/">Computational Visual Design Laboratory</a>
+								of Roma Tre University.
+							</div>
+							<div>
+								<a href="https://github.com/cvdlab/LARLIB.jl">Project page</a> -
+								<a href="https://twitter.com/giuliom_95/status/924692912453152772">Tweet</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="project">
-						<div class="title">Hoverbike</div>
-						<img src="./projects/hoverbike.jpg">
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/950124113506590726">Tweet</a>
+						<div class="image">
+							<img src="./projects/hoverbike.jpg">
+						</div>
+						<div class="text">
+							<div class="title">Hoverbike</div>
+							<div>
+								<a href="https://twitter.com/giuliom_95/status/950124113506590726">Tweet</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="project">
-						<div class="title">maya-stripes</div>
-						<img src="./projects/stripes.jpg">
-						<div>
-							A Maya plugin to model many parallel paper stripes imitating
-							the <a href="https://www.google.com/search?q=alberto+biasi+politipo&tbm=isch">
-							work of Alberto Biasi</a>
+						<div class="image">
+							<img src="./projects/stripes.jpg">
 						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/maya-stripes">Project page</a><br>
+						<div class="text">
+							<div class="title">maya-stripes</div>
+							<div>
+								A Maya plugin to model many parallel paper stripes imitating
+								the <a href="https://www.google.com/search?q=alberto+biasi+politipo&tbm=isch">
+								work of Alberto Biasi</a>
+							</div>
+							<div>
+								<a href="https://gitlab.com/giuliom95/maya-stripes">Project page</a><br>
+							</div>
 						</div>
 					</div>
 
 					<div class="project">
-						<div class="title">Raytracer</div>
-						<img src="./projects/rt.jpg">
-						<div>
-							Barebone ray tracer with shadow rays. One of my first projects in C++.
+						<div class="image">
+							<img src="./projects/rt.jpg">
 						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/raytracer">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/911552940074299393">Tweet #1</a> - 
-							<a href="https://twitter.com/giuliom_95/status/903986604687187968">Tweet #2</a>
+						<div class="text">
+							<div class="title">Raytracer</div>
+							<div>
+								Barebone ray tracer with shadow rays. One of my first projects in C++.
+							</div>
+							<div>
+								<a href="https://gitlab.com/giuliom95/raytracer">Project page</a> -
+								<a href="https://twitter.com/giuliom_95/status/911552940074299393">Tweet #1</a> - 
+								<a href="https://twitter.com/giuliom_95/status/903986604687187968">Tweet #2</a>
+							</div>
 						</div>
 					</div>
 				</div>
 
+
+
+
 				<div class="column">
 					<div class="project">
-						<div class="title">Internet - Animated short</div>
-						<iframe src="https://player.vimeo.com/video/282893873" width="460" height="193" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-						<div>
-							A short animated movie I made in 10 days.
+						<div class="image">
+							<iframe src="https://player.vimeo.com/video/282893873" width="490" height="205" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
-						<div>
-							<a href="https://vimeo.com/giuliom95/internet">Vimeo</a> -
-							<a href="https://twitter.com/giuliom95/status/1025087287275782144">Tweet</a>
-						</div>
-					</div>
-
-					<div class="project">
-						<div class="title">Normal maps baker</div>
-						<img src="./projects/baker.jpg">
-						<div>
-							<a href="https://github.com/giuliom95/baker">Project page</a> -
-							<a href="https://twitter.com/giuliom95/status/1045004483779080195">Tweet</a>
+						<div class="text">
+							<div class="title">Internet - Animated short</div>
+							<div>
+								A short animated movie I made in 10 days.
+							</div>
+							<div>
+								<a href="https://vimeo.com/giuliom95/internet">Vimeo</a> -
+								<a href="https://twitter.com/giuliom95/status/1025087287275782144">Tweet</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="project">
-						<div class="title">Dumplings</div>
-						<img src="./projects/dumplings.jpg">
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/973297857557037058">Tweet</a>
+						<div class="image">
+							<img src="./projects/baker.jpg">
+						</div>
+						<div class="text">
+							<div class="title">Normal maps baker</div>
+							<div>
+								<a href="https://github.com/giuliom95/baker">Project page</a> -
+								<a href="https://twitter.com/giuliom95/status/1045004483779080195">Tweet</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="project">
-						<div class="title">Path tracer</div>
-						<img src="./projects/pt.jpg">
-						<div>
-							Naive recursive path tracer. I wrote it mainly to get comfy with modern C++.
+						<div class="image">
+							<img src="./projects/dumplings.jpg">
 						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/renderer">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>
-						</div>
-					</div>
-
-
-					<div class="project">
-						<div class="title">arduino-maya</div>
-						<div class="videoBox">
-							<a href="javascript:void(0)" onclick="playPause('arduino', 'arduinoBtn')">
-								<video loop id="arduino">
-									<source src="./projects/bunny.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-								<div id="arduinoBtn" class="playButton"><img src="./play.svg"></div>
-							</a>
-						</div>
-						<div>
-							Software to make an Arduino board and a Maya session communicate.
-							This can be particularly useful to create custom input devices.
-							I used it with three slider potentiometers.
-						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/arduino-maya">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/918938709814398976">Tweet</a>
+						<div class="text">
+							<div class="title">Dumplings</div>
+							<div>
+								<a href="https://twitter.com/giuliom_95/status/973297857557037058">Tweet</a>
+							</div>
 						</div>
 					</div>
 
 					<div class="project">
-						<div class="title">Chiatta Zero-G</div>
-						<img src="./projects/chiatta.jpg">
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/891753721746653186">Tweet #1</a> -
-							<a href="https://twitter.com/giuliom_95/status/848251669171326977">Tweet #2</a>
+						<div class="image">
+							<img src="./projects/pt.jpg">
+						</div>
+						<div class="text">
+							<div class="title">Path tracer</div>
+							<div>
+								Naive recursive path tracer. I wrote it mainly to get comfy with modern C++.
+							</div>
+							<div>
+								<a href="https://gitlab.com/giuliom95/renderer">Project page</a> -
+								<a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project">
+						<div class="image">
+							<div class="videoBox">
+								<a href="javascript:void(0)" onclick="playPause('arduino', 'arduinoBtn')">
+									<video loop id="arduino">
+										<source src="./projects/bunny.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+									<div id="arduinoBtn" class="playButton"><img src="./play.svg"></div>
+								</a>
+							</div>
+						</div>
+						<div class="text">
+							<div class="title">arduino-maya</div>
+							<div>
+								Software to make an Arduino board and a Maya session communicate.
+								This can be particularly useful to create custom input devices.
+								I used it with three slider potentiometers.
+							</div>
+							<div>
+								<a href="https://gitlab.com/giuliom95/arduino-maya">Project page</a> -
+								<a href="https://twitter.com/giuliom_95/status/918938709814398976">Tweet</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="project">
+						<div class="image">
+							<img src="./projects/chiatta.jpg">
+						</div>
+						<div class="text">
+							<div class="title">Chiatta Zero-G</div>
+							<div>
+								<a href="https://twitter.com/giuliom_95/status/891753721746653186">Tweet #1</a> -
+								<a href="https://twitter.com/giuliom_95/status/848251669171326977">Tweet #2</a>
+							</div>
 						</div>
 					</div>
 					
 					<div class="project">
-						<div class="title">Happy Cactus</div>
-						<div class="videoBox">
-							<a href="javascript:void(0)" onclick="playPause('cactus', 'cactusBtn')">
-								<video loop id="cactus">
-									<source src="./projects/cactus.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video> 
-								<div id="cactusBtn" class="playButton"><img src="./play.svg"></div>
-							</a>
+						<div class="image">
+							<div class="videoBox">
+								<a href="javascript:void(0)" onclick="playPause('cactus', 'cactusBtn')">
+									<video loop id="cactus">
+										<source src="./projects/cactus.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video> 
+									<div id="cactusBtn" class="playButton"><img src="./play.svg"></div>
+								</a>
+							</div>
 						</div>
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/860947190302339073">Tweet #1</a> -
-							<a href="https://twitter.com/giuliom_95/status/860242784174972930">Tweet #2</a> -
-							<a href="https://twitter.com/giuliom_95/status/858795456507334657">Tweet #3</a> 
+						<div class="text">
+							<div class="title">Happy Cactus</div>
+							<div>
+								<a href="https://twitter.com/giuliom_95/status/860947190302339073">Tweet #1</a> -
+								<a href="https://twitter.com/giuliom_95/status/860242784174972930">Tweet #2</a> -
+								<a href="https://twitter.com/giuliom_95/status/858795456507334657">Tweet #3</a> 
+							</div>
 						</div>
 					</div>
 
