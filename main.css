@@ -115,6 +115,13 @@ body {
 	font-weight: 400;
 }
 
+.project .date {
+	text-align: right;
+	margin-top: -40px;
+	width: 95%;
+	float: left;
+}
+
 .project img {
 	width: 460px;
 	margin-left: 15px;
