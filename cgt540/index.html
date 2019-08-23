@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>[CGT 540] Giulio Martella</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script> 
+			function playPause(videoId, buttonId) { 
+				var video = document.getElementById(videoId);
+				var button = document.getElementById(buttonId);
+				if (video.paused) {
+					video.play();
+					button.hidden = true;
+				} else {
+					video.pause();
+					button.hidden = false;
+				}
+			} 
+		</script>
+	</head>
+	<body>
+		<div class="background"></div>
+		<div class="content">
+			<div class="header">
+				<div class="title">
+					<div class="name">Giulio Martella</div>
+				</div>
+				<div class="logos">
+					
+				</div>
+			</div>
+			<div id="about">
+				<p>
+				</p>
+			</div>
+
+			<div class="projectContainer">
+
+				<div class="column leftColumn">
+					<div class="project">
+						<div class="title">Test</div>
+						<div class="date"></div>
+                        <div>Test test test</div>
+					</div>
+				</div>
+
+				<div class="column">
+                    <div class="project">
+                        <div class="title">Test</div>
+                        <div class="date"></div>
+                        <div>Test test test</div>
+                    </div>
+                </div>
+			</div>
+			<div id="footer">
+			</div>
+		</div>
+	</body>
+</html>
