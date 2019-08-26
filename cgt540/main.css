@@ -37,7 +37,7 @@ body {
 
 .header {
 	background-color: var(--shallow-color);
-	height: 130px;
+	height: 95px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	padding: 5 23 0 23; 
@@ -75,9 +75,14 @@ body {
 	padding-top: 20px;
 	padding-bottom: 40px;
 	font-size: 18px;
-	text-align: center;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+}
+
+#about img {
+	width: 190px;
+	border-radius: 5px;
+	margin-left: 685px;
 }
 
 #about a {
@@ -85,8 +90,11 @@ body {
 }
 
 #about p {
+	text-align: justify;
 	margin: 0px;
 	margin-bottom: 8px;
+	margin-top: -190px;
+	width: 70%;
 }
 
 .projectContainer .column {
