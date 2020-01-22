@@ -14,7 +14,7 @@
    viewBox="0 0 242.46723 236.83249"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="twitter.svg">
   <defs
      id="defs4" />
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-4.9141199"
-     inkscape:cy="286.95657"
+     inkscape:cx="-203.91412"
+     inkscape:cy="282.95657"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -35,8 +35,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="2560"
-     inkscape:window-height="1376"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -69,11 +69,12 @@
        ry="22.130533" />
     <g
        transform="matrix(0.78390971,0,0,0.84173376,-182.90011,-496.16365)"
-       id="g4876">
+       id="g4876"
+       style="fill:#000000;fill-opacity:1;stroke:none">
       <path
          d="m 633.9,812.04 c 112.46,0 173.96,-93.168 173.96,-173.96 0,-2.6463 -0.0539,-5.2806 -0.1726,-7.903 11.938,-8.6302 22.314,-19.4 30.498,-31.66 -10.955,4.8694 -22.9315,7.5224 -35.111,9.6255 12.1855,-7.9443 22.314,-19.543 26.886,-33.817 -11.813,7.0031 -24.895,12.093 -38.824,14.841 -11.157,-11.884 -27.041,-19.317 -44.629,-19.317 -33.764,0 -61.144,27.381 -61.144,61.132 0,4.7978 0.5364,9.4646 1.5854,13.941 -50.815,-2.5569 -95.874,-26.886 -126.03,-63.88 -5.2508,9.0354 -8.2785,19.531 -8.2785,30.73 0,21.212 10.794,39.938 27.208,50.893 -10.031,-0.30992 -19.454,-3.0635 -27.69,-7.6468 -0.009,0.25652 -0.009,0.50661 -0.009,0.78077 0,29.61 23.19632,53.62489 49.051,59.934 -5.1376,1.4006 -10.543,2.1516 -16.122,2.1516 -3.9336,0 -7.766,-0.38716 -11.491,-1.1026 7.7838,24.293 30.355,41.971 57.115,42.465 -20.926,16.402 -30.01718,22.92648 -47.50413,24.36922 -11.31331,0.9334 -17.39969,0.78031 -24.12994,-0.13923 25.46801,19.11177 40.30207,28.55867 74.83507,28.55867"
          id="path4878"
-         style="fill:none;fill-opacity:1;stroke:#000022;stroke-width:9.23295784;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:9.23295784;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cscccccssccsccscsccscc" />
     </g>

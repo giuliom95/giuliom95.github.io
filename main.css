@@ -1,177 +1,119 @@
 :root {
-	--deep-color: #000022;
-	--shallow-color: white;
-	--bg-color: #eaeaea;
+	--logoes-width: 130px;
+	--name-width: 450px;
+	--body-width: 1366px;
 }
 
-html {
-	margin: 0;
-}
-
-body {
-	width: 100%;
-	margin: 0;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	color: var(--deep-color);
-}
-
-.background {
-	left: 0;
-	position: fixed;
-	right: 0;
-	height: 100%;
-	background-color: var(--bg-color);
-	background-size: cover;
-	top: 0px;
-	z-index: -1;
-}
-
-.content {
-	margin: auto;
-	width: 1000px;
-	padding-top: 50px;
-	padding-left: 50px;
-	padding-right: 50px;
-}
-
-.header {
-	background-color: var(--shallow-color);
-	height: 130px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	padding: 5 23 0 23; 
-}
-
-.title {
-	float: left;
-}
-
-.name {
-	font-size: 50px;
-	padding-left: 30px;
-	padding-top: 33px;
-}
-
-.logos {
-	float: right;
-	padding: 30px;
-	padding-top: 42px;
-}
-
-.logos img {
-	width: 40px;
-	margin-left: 4px;
-}
-
-.logos a {
-	text-decoration: none;
-}
-
-#about {
-	color: var(--deep-color);
-	background-color: var(--shallow-color);
-	padding: 60px;
-	padding-top: 20px;
-	padding-bottom: 40px;
-	font-size: 18px;
-	text-align: center;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-#about a {
-	color: var(--deep-color);
-}
-
-#about p {
-	margin: 0px;
-	margin-bottom: 8px;
-}
-
-.projectContainer .column {
-	float: left;
-}
-
-.projectContainer .leftColumn {
-	margin-right: 20px;
-}
-
-.projectContainer::after {
-	content:'';
-	display: block;
-	clear: both;
-}
-
-.project {
-	width: 490px;
-	font-size: 16px;
-	background-color: var(--shallow-color);
-	margin-top: 20px;
-	border-radius: 5px;
-}
-
-.project .title {
-	font-weight: 400;
-}
-
-.project .date {
-	text-align: right;
-	margin-top: -40px;
-	width: 95%;
-	float: left;
-}
-
-.project img {
-	width: 460px;
-	margin-left: 15px;
-	border-radius: 5px;
-}
-
-.project iframe {
-	width: 460px;
-	margin-left: 15px;
-	border-radius: 5px;
-}
-
-.project .videoBox {
-	width: 460px;
-	margin-left: 15px;
-	margin-bottom: -4px;
-	padding: 0px;
-}
-
-.project video {
-	width: 100%;
-	border-radius: 5px;
-}
-
-.project .playButton {
-	position: absolute;
-	margin: 0px;
-	margin-top: -265px;
-	margin-left: 200px;
-	padding: 0px;
-	width: 60px;
-}
-
-.project .playButton img {
-	margin: 0px;
-	width: 100%;
-}
-
-.project div {
-	padding: 10px;
-	clear: both;
-}
-
-.project a {
-	color: var(--deep-color);
+* {
 	margin: 0px;
 	padding: 0px;
 	border: none;
 }
 
-#footer {
-	margin-bottom: 100px;
+body {
+	background-color: #843030 ;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	width: var(--body-width);
+	margin: auto;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px dashed white;
+}
+
+a:hover {
+	border-bottom: 1px solid white;
+}
+
+.column {
+	float: left;
+	padding-left: 10px;
+	padding-top: 110px;
+	width: calc(33% - 10px);
+}
+
+.block {
+	overflow: hidden;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	background: black;
+	position: relative;
+}
+
+.title {
+	background-color: white;
+	height: 100px;
+	position: fixed;
+	width: var(--body-width);
+	z-index: 1;
+	padding-right: calc((100vw - var(--body-width)) / 2);
+	padding-left: calc((100vw - var(--body-width)) / 2);
+	left: 0;
+}
+
+.title-name {
+	float: left;
+	font-size: 56px;
+	line-height: 58px;
+	font-family: 'Calluna';
+	font-weight: 700;
+	padding-top: 28px;
+	padding-left: 8px;
+	width: calc(var(--body-width) - var(--logoes-width) - 35px);
+}
+
+
+.title-right {
+	float: left;
+	width: var(--logoes-width);
+	margin-top: 30px;
+}
+
+.logos img {
+	width: 40px;
+}
+
+.description {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: calc(100% - 40px);
+	background-color: rgba(0, 0, 0, 0.75);
+	padding: 20px;
+	color: white;
+	visibility: hidden;
+}
+
+.descriptiontitle {
+	font-weight: 500;
+}
+
+.description div {
+	padding-bottom: 15px;
+}
+
+.block:hover .description{
+	visibility: visible;
+}
+
+.blockcontent {
+	width: 100%;
+}
+
+.blockcontent * {
+	width: 100%;
+}
+
+.about {
+	color: white;
+	background: rgba(0, 0, 0, 0.35);
+	padding: 20px;
+	padding-bottom: 5px;
+}
+
+.about .blockcontent div {
+	padding-bottom: 15px;
 }

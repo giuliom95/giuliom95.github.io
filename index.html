@@ -1,38 +1,29 @@
 <html>
 	<head>
-		<title>Giulio Martella</title>
+		<link id="webfont_calluna" rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/calluna/stylesheet.css?v=3"/>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="main.css">
-		<script> 
-			function playPause(videoId, buttonId) { 
-				var video = document.getElementById(videoId);
-				var button = document.getElementById(buttonId);
-				if (video.paused) {
-					video.play();
-					button.hidden = true;
-				} else {
-					video.pause();
-					button.hidden = false;
-				}
-			} 
-		</script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114700220-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
 
-		  gtag('config', 'UA-114700220-1');
+		<script>
+			function pause(element) {
+				var video = element.children.item(0).children.item(0);
+				video.pause();
+			}
+
+			function play(element) {
+				var video = element.children.item(0).children.item(0).children.item(0);
+				video.play();
+			}
 		</script>
+
+		<title>Giulio Martella - Personal website</title>
 	</head>
 	<body>
-		<div class="background"></div>
-		<div class="content">
-			<div class="header">
-				<div class="title">
-					<div class="name">Giulio Martella</div>
-				</div>
+		<div class="title">
+			<div class="title-name">
+				Giulio Martella
+			</div>
+			<div class="title-right">
 				<div class="logos">
 					<a href="https://github.com/giuliom95">
 						<img src="./github.svg">
@@ -40,254 +31,310 @@
 					<a href="https://www.linkedin.com/in/giulio-martella-71a582123/">
 						<img src="./linkedin.svg">
 					</a>
-					<a href="https://vimeo.com/giuliom95">
-						<img src="./vimeo.svg">
-					</a>
+					<!--<a href=".">
+						<img src="./tumblr.svg">
+					</a>-->
 					<a href="https://twitter.com/giuliom95">
 						<img src="./twitter.svg">
 					</a>
 				</div>
 			</div>
-			<div id="about">
-				<p>
-					Hello, I am Giulio. I'm in love with animation and computer graphics.
-					I discovered my passion back in the summer of 2016 and since then 
-					I've been constantly working to improve my skills.
-				</p>
-				<p>
-                    I'm doing an exchange semester at <a href="https://purdue.edu/">Purdue University</a>, as an Animation major student.<br>
-					I'm currently studying Visual Computing at the <a href="https://www.uni-stuttgart.de/en/index.html">University of Stuttgart</a>.<br>
-					I have been an Assistant Technical Director at <a href="http://www.rbw-cgi.it/en/about-us">Rainbow CGI</a>.<br> 
-					I got a B.Sc. in Computer Engineering at <a href="http://www.uniroma3.it/en/">Roma Tre University</a>.
-				</p>
-				<p>
-					Maya, Nuke, and RenderMan are my daily playmates; C++ and Python my languages of choice.
-				</p>
-				<p>
-					Back in 2010, I've discovered Fedora Linux and I'm a user of the whole RHEL family since then.
-				</p>
-				<p style="font-weight: 400">
-					<a href="./resume.pdf">
-						Here is my resume.
-					</a>
-				</p>
+		</div>
+
+
+		<div class="column">
+			<div class="block about">
+				
+				<div class="blockcontent">
+					<div>
+						Hello, I am Giulio. I'm in love with animation and computer graphics.
+						I discovered my passion back in the summer of 2016 and since then 
+						I've been constantly working to improve my skills.
+					</div>
+					<div>
+						I am currently a Visual Computing Grad student at the 
+						<a href="https://www.uni-stuttgart.de/en/index.html">University of Stuttgart</a> and I spent 
+						an exchange semester at <a href="https://purdue.edu/">Purdue University</a>, majoring in Animation.
+						Before moving to Germany I have been an Assistant Technical Director at <a href="http://www.rbw-cgi.it/en/about-us">Rainbow CGI</a> for a few months. 
+						I also got a B.Sc. in Computer Engineering at <a href="http://www.uniroma3.it/en/">Roma Tre University</a>.
+					</div>
+					<div>
+						Check out <a href="./Giulio_Martella-2020-01-resume.pdf">my resume</a> for further information.
+					</div>
+				</div>
 			</div>
 
-			<div class="projectContainer">
+			<div class="block">
+				
+				<div class="blockcontent">
+					<img src="projects/istant_radiosity.jpg">
+				</div>
 
-				<div class="column leftColumn">
-					<div class="project">
-						<div class="title">Instant Radiosity</div>
-						<div class="date">Feb 2019</div>
-						<img src="./projects/istant_radiosity.jpg">
-						<div>
-							Modern interactive implementation of the 
-							<a href="https://kluedo.ub.uni-kl.de/files/4963/Keller_Instant%20radiosity.pdf">1997 "Instant Radiosity" paper</a> 
-							I did as final project for the "Practical Course in Visual Computing" at the University of Stuttgart.
-							It uses <a href="https://www.vis.uni-stuttgart.de/projekte/ogl4core-framework">"OGL4Core Framework"</a>, 
-							an educational tool developed at the University which offers an easy interface to some OpenGL 4 functionalities.
-						</div>
-						<div>
-							A Naive Full Monte Carlo Path Tracer on a Compute Shader is used to displace the Virtual Point Lights.
-							Each VPL has its own shadow map stored into a cubemap texture array. Every shadow map is generated in just one render pass.
-						</div>
-						<div>
-							<a href="https://twitter.com/giuliom95/status/1094718338025046018">Tweet</a>
-						</div>
+				<div class="description">
+					<div class="descriptiontitle">Instant Radiosity</div>
+					<div>
+						Modern interactive implementation of the 
+						<a href="https://kluedo.ub.uni-kl.de/files/4963/Keller_Instant%20radiosity.pdf">1997 "Instant Radiosity" paper</a> 
+						Presented as final project for the "Practical Course in Visual Computing" at the University of Stuttgart.
+						It uses <a href="https://www.vis.uni-stuttgart.de/projekte/ogl4core-framework">"OGL4Core Framework"</a>, 
+						an educational tool developed at the University which offers an easy interface to some OpenGL 4 functionalities.
 					</div>
-
-					<div class="project">
-						<div class="title">ExrViz</div>
-						<div class="date">Aug 2018</div>
-						<img src="./projects/exrviz.jpg">
-						<div>
-							An OpenEXR visualizer I wrote in C++ and Qt5. I use this to debug renders.
-						</div>
-						<div>
-							<a href="https://github.com/giuliom95/exrviz">Project page</a>
-						</div>
+					<div>
+						A Naive Full Monte Carlo Path Tracer on a Compute Shader is used to displace the Virtual Point Lights.
+						Each VPL has its own shadow map stored into a cubemap texture array. Every shadow map is generated in just one render pass.
 					</div>
-
-					<div class="project">
-						<div class="title">Bachelor thesis</div>
-						<div class="date">Oct 2017</div>
-						<img src="./projects/lar.jpg">
-						<div>
-							A <a href="https://julialang.org/">Julia</a> implementation of a
-							sperimental geometric kernel capable of boolean operations on very complex
-							3D models. The system is based on 
-							<a href="http://paoluzzi.dia.uniroma3.it/web/pao/doc/gpm13-final.pdf">LAR</a>.
-							This is the result of my work at the 
-							<a href="https://github.com/cvdlab/">Computational Visual Design Laboratory</a>
-							of Roma Tre University.
-						</div>
-						<div>
-							<a href="https://github.com/cvdlab/LARLIB.jl">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/924692912453152772">Tweet</a>
-						</div>
+					<div>
+						<a href="https://twitter.com/giuliom95/status/1094718338025046018">Tweet</a>
 					</div>
+				</div>
+			</div>
 
-					<div class="project">
-						<div class="title">Hoverbike</div>
-						<div class="date">Jan 2018</div>
-						<img src="./projects/hoverbike.jpg">
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/950124113506590726">Tweet</a>
-						</div>
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/exrviz.jpg">
+				</div>
+				<div class="description">
+					<div class="descriptiontitle">ExrViz</div>
+					<div>
+						An OpenEXR visualizer wrote in C++ and Qt5.
 					</div>
-
-					<div class="project">
-						<div class="title">maya-stripes</div>
-						<div class="date">Jan 2017</div>
-						<img src="./projects/stripes.jpg">
-						<div>
-							A Maya plugin to model many parallel paper stripes imitating
-							the <a href="https://www.google.com/search?q=alberto+biasi+politipo&tbm=isch">
-							work of Alberto Biasi</a>
-						</div>
-						<div>
-							<a href="https://github.com/giuliom95/maya-stripes">Project page</a><br>
-						</div>
+					<div>
+						<a href="https://github.com/giuliom95/exrviz">Project page</a>
 					</div>
+				</div>
+			</div>
 
-					<div class="project">
-						<div class="title">Raytracer</div>
-						<div class="date">Sep 2017</div>
-						<img src="./projects/rt.jpg">
-						<div>
-							Barebone ray tracer with shadow rays. One of my first projects in C++.
-						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/raytracer">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/911552940074299393">Tweet #1</a> - 
-							<a href="https://twitter.com/giuliom_95/status/903986604687187968">Tweet #2</a>
-						</div>
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/hoverbike.jpg">
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Hoverbike</div>
+					<div>
+						Personal project modeled in Maya. Rendered in Renderman.
+					</div>
+					<div>
+						<a href="https://twitter.com/giuliom_95/status/950124113506590726">Tweet</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block" onmouseleave="play(this)">
+				<div class="blockcontent" onmouseover="pause(this)">
+					<div class="videoBox">
+						<video loop autoplay>
+							<source src="./projects/bunny.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 					</div>
 				</div>
 
-				<div class="column">
-					<div class="project">
-						<div class="title">Animator</div>
-						<div class="date">Jun 2019</div>
-						<div class="videoBox">
-								<a href="javascript:void(0)" onclick="playPause('animator', 'animatorBtn')">
-									<video loop id="animator">
-										<source src="./projects/animator.mp4" type="video/mp4">
-										Your browser does not support the video tag.
-									</video>
-									<div id="animatorBtn" class="playButton"><img src="./play.svg"></div>
-								</a>
-							</div>
-						<div>
-							Hand-drawn animation program with tablet support, smooth stroking and onion skinning. I made this to get better with OpenGL and Qt.
-						</div>
-						<div>
-							<a href="https://github.com/giuliom95/animator">Project page</a> - 
-							<a href="https://twitter.com/search?f=tweets&vertical=default&q=%23digitaldrawing%20AND%20%23cg%20AND%20%23qt%20AND%20%23opengl%20from%3Agiuliom95">Tweets</a>
-						</div>
+				<div class="description">
+					<div class="descriptiontitle">arduino-maya</div>
+					<div>
+						Software to make an Arduino board and a Maya session communicate.
+						This can be particularly useful to create custom input devices.
 					</div>
-
-					<div class="project">
-						<div class="title">Internet - Animated short</div>
-						<div class="date">Jul 2018</div>
-						<iframe src="https://player.vimeo.com/video/282893873" width="460" height="193" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-						<div>
-							A short animated movie I made in 10 days.
-						</div>
-						<div>
-							<a href="https://vimeo.com/giuliom95/internet">Vimeo</a> -
-							<a href="https://twitter.com/giuliom95/status/1025087287275782144">Tweet</a>
-						</div>
+					<div>
+						<a href="https://github.com/giuliom95/arduino-maya">Project page</a> -
+						<a href="https://twitter.com/giuliom_95/status/918938709814398976">Tweet</a>
 					</div>
-
-					<div class="project">
-						<div class="title">Normal maps baker</div>
-						<div class="date">Sep 2018</div>
-						<img src="./projects/baker.jpg">
-						<div>
-							<a href="https://github.com/giuliom95/baker">Project page</a> -
-							<a href="https://twitter.com/giuliom95/status/1045004483779080195">Tweet</a>
-						</div>
-					</div>
-
-					<div class="project">
-						<div class="title">Dumplings</div>
-						<div class="date">Mar 2018</div>
-						<img src="./projects/dumplings.jpg">
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/973297857557037058">Tweet</a>
-						</div>
-					</div>
-
-					<div class="project">
-						<div class="title">Path tracer</div>
-						<div class="date">Dec 2017</div>
-						<img src="./projects/pt.jpg">
-						<div>
-							Naive recursive path tracer. I wrote it mainly to get comfy with modern C++.
-						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/renderer">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>
-						</div>
-					</div>
-
-
-					<div class="project">
-						<div class="title">arduino-maya</div>
-						<div class="date">Oct 2017</div>
-						<div class="videoBox">
-							<a href="javascript:void(0)" onclick="playPause('arduino', 'arduinoBtn')">
-								<video loop id="arduino">
-									<source src="./projects/bunny.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-								<div id="arduinoBtn" class="playButton"><img src="./play.svg"></div>
-							</a>
-						</div>
-						<div>
-							Software to make an Arduino board and a Maya session communicate.
-							This can be particularly useful to create custom input devices.
-							I used it with three slider potentiometers.
-						</div>
-						<div>
-							<a href="https://gitlab.com/giuliom95/arduino-maya">Project page</a> -
-							<a href="https://twitter.com/giuliom_95/status/918938709814398976">Tweet</a>
-						</div>
-					</div>
-
-					<div class="project">
-						<div class="title">Chiatta Zero-G</div>
-						<div class="date">Apr 2017</div>
-						<img src="./projects/chiatta.jpg">
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/891753721746653186">Tweet #1</a> -
-							<a href="https://twitter.com/giuliom_95/status/848251669171326977">Tweet #2</a>
-						</div>
-					</div>
-					
-					<div class="project">
-						<div class="title">Happy Cactus</div>
-						<div class="date">May 2017</div>
-						<div class="videoBox">
-							<a href="javascript:void(0)" onclick="playPause('cactus', 'cactusBtn')">
-								<video loop id="cactus">
-									<source src="./projects/cactus.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video> 
-								<div id="cactusBtn" class="playButton"><img src="./play.svg"></div>
-							</a>
-						</div>
-						<div>
-							<a href="https://twitter.com/giuliom_95/status/860947190302339073">Tweet #1</a> -
-							<a href="https://twitter.com/giuliom_95/status/860242784174972930">Tweet #2</a> -
-							<a href="https://twitter.com/giuliom_95/status/858795456507334657">Tweet #3</a> 
-						</div>
-					</div>
-
 				</div>
 			</div>
-			<div id="footer">
+		</div>
+
+
+		<div class="column">
+			<div class="block" onmouseleave="play(this)">
+				<div class="blockcontent" onmouseover="pause(this)">
+					<div class="videoBox">
+						<video loop autoplay>
+							<source src="./projects/animator.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+				<div class="description">
+					<div class="descriptiontitle">Animator</div>
+					<div>
+						Hand-drawn animation program with drawing tablet support, smooth stroking and onion skinning. 
+						It started as an OpenGL and Qt exercise.
+					</div>
+					<div>
+						<a href="https://github.com/giuliom95/animator">Project page</a> - 
+						<a href="https://twitter.com/search?f=tweets&vertical=default&q=%23digitaldrawing%20AND%20%23cg%20AND%20%23qt%20AND%20%23opengl%20from%3Agiuliom95">Tweets</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/baker.jpg">
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Normal maps baker</div>
+					<div>Written in C++ mainly to test Embree out.</div>
+					<div>
+						<a href="https://github.com/giuliom95/baker">Project page</a> -
+						<a href="https://twitter.com/giuliom95/status/1045004483779080195">Tweet</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/pt.jpg">
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Path tracer</div>
+					<div>
+						Monte Carlo pathtracer with direct+indirect light contribution splitting and a BVH to accelerate ray-scene intersection. Beside STL, it has only OpenEXR as dependency. 
+					</div>
+					<div>
+						<a href="https://github.com/giuliom95/pathtracer">Project page</a> -
+						<a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/rt.jpg">
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Raytracer</div>
+					<div>
+						Barebone ray tracer with shadow rays. One of my first projects in C++.
+					</div>
+					<div>
+						<a href="https://github.com/giuliom95/rt">Project page</a> -
+						<a href="https://twitter.com/giuliom_95/status/911552940074299393">Tweet #1</a> - 
+						<a href="https://twitter.com/giuliom_95/status/903986604687187968">Tweet #2</a>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/chiatta.jpg">
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Chiatta Zero-G</div>
+					<div>
+						Modeled in Maya after a Moebius drawing. The first "complex" modeling project I made.
+					</div>
+					<div>
+						<a href="https://twitter.com/giuliom_95/status/891753721746653186">Tweet #1</a> -
+						<a href="https://twitter.com/giuliom_95/status/848251669171326977">Tweet #2</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="column">
+			<div class="block" onmouseleave="play(this)">
+				<div class="blockcontent" onmouseover="pause(this)">
+					<div class="videoBox">
+						<video loop autoplay>
+							<source src="./projects/internet.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Internet - Animated short</div>
+					<div>
+						A short animated movie I made in 10 days.
+					</div>
+					<div>
+						<a href="https://vimeo.com/giuliom95/internet">Vimeo</a> -
+						<a href="https://twitter.com/giuliom95/status/1025087287275782144">Tweet</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/lar.jpg">
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Bachelor thesis</div>
+					<div>
+						A <a href="https://julialang.org/">Julia</a> implementation of a
+						sperimental geometric kernel capable of boolean operations on very complex
+						3D models. The system is based on 
+						<a href="http://paoluzzi.dia.uniroma3.it/web/pao/doc/gpm13-final.pdf">LAR</a>.
+						This is the result of my work at the 
+						<a href="https://github.com/cvdlab/">Computational Visual Design Laboratory</a>
+						of Roma Tre University.
+					</div>
+					<div>
+						<a href="https://github.com/cvdlab/LARLIB.jl">Project page</a> -
+						<a href="https://twitter.com/giuliom_95/status/924692912453152772">Tweet</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/dumplings.jpg">
+				</div>
+				<div class="description">
+					<div class="descriptiontitle">Dumplings</div>
+					<div>Modeling, surfacing and lighting done in Maya. Rendered with Renderman. Some color correction and depth of field effect done on Nuke.</div>
+					<div>
+						<a href="https://twitter.com/giuliom_95/status/973297857557037058">Tweet</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="block">
+				<div class="blockcontent">
+					<img src="projects/stripes.jpg">
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">maya-stripes</div>
+					<div>
+						A Maya plugin to model many parallel paper stripes imitating
+						the <a href="https://www.google.com/search?q=alberto+biasi+politipo&tbm=isch">
+						work of Alberto Biasi</a>
+					</div>
+					<div>
+						<a href="https://github.com/giuliom95/maya-stripes">Project page</a><br>
+					</div>
+				</div>
+			</div>
+
+			<div class="block" onmouseleave="play(this)">
+				<div class="blockcontent" onmouseover="pause(this)">
+					<div class="videoBox">
+						<video loop autoplay>
+							<source src="./projects/cactus.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+
+				<div class="description">
+					<div class="descriptiontitle">Happy Cactus</div>
+					<div>
+						Loop done from scratch in Maya. The spikes have been displaced via scripting (PyMEL). Rendered in Renderman then composited in Nuke.
+					</div>
+					<div>
+						<a href="https://twitter.com/giuliom_95/status/860947190302339073">Tweet #1</a> -
+						<a href="https://twitter.com/giuliom_95/status/860242784174972930">Tweet #2</a> -
+						<a href="https://twitter.com/giuliom_95/status/858795456507334657">Tweet #3</a> 
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</body>
