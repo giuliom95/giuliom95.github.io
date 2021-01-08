@@ -1,0 +1,110 @@
+:root {
+    --cm: calc(50vw - 60px);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: inherit;
+    opacity: 0.5;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+    opacity: 1;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.left {
+    background: #aaa;
+    width: 25%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftcontents {
+    width: 360px;
+    padding: 20px;
+}
+
+.right {
+    background: #eee;
+    padding-left: 20px;
+    flex-grow: 1;
+    min-height: 100px;
+    overflow-y: auto;
+}
+
+.card {
+    background: #aaa;
+    margin: 20px 20px 0px 0px;
+    width: var(--cm);
+    height: calc(3 * var(--cm) / 4);
+}
+
+.card div {
+    position: relative;
+    font-size: calc(var(--cm) / 50);
+}
+
+.card div * {
+    width: 100%;
+}
+
+.card div div {
+    margin-bottom: 10px;
+}
+
+.card div div i {
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+@media screen and (max-width: 1600px) {
+    :root {
+        --cm: calc(100vw - 460px);
+    }
+
+    .left {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    :root {
+        --cm: calc(100vw - 60px);
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        min-height: unset;
+        overflow-y: unset;
+    }
+}
