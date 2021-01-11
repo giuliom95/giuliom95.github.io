@@ -42,13 +42,37 @@ body {
 }
 
 .leftcontents {
-    width: 360px;
+    width: 342px;
     padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 }
+
+.leftcontents .title {
+    font-family: 'Calluna';
+	font-weight: 700;
+    font-size: 45px;
+}
+
+.leftcontents .menu {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.leftcontents a[rel] {
+    background: black;
+    color: #aaa;
+    padding: 0px 3px 0px 3px;
+}
+
 
 .right {
     background: #eee;
-    padding-left: 20px;
+    padding: 20px 0px 0px 20px;
     flex-grow: 1;
     min-height: 100px;
     overflow-y: auto;
@@ -56,7 +80,7 @@ body {
 
 .card {
     background: #aaa;
-    margin: 20px 20px 0px 0px;
+    margin: 0px 20px 20px 0px;
     width: var(--cm);
     height: calc(3 * var(--cm) / 4);
 }
@@ -78,7 +102,6 @@ body {
     font-weight: 500;
     font-style: italic;
 }
-
 
 @media screen and (max-width: 1600px) {
     :root {
