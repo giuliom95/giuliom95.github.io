@@ -63,12 +63,20 @@ body {
     font-weight: 300;
 }
 
-.leftcontents a[rel] {
-    background: black;
-    color: #aaa;
-    padding: 0px 3px 0px 3px;
+.leftcontents .menu div {
+    padding: 1px 0px;
+    transition: all 0.3s;
 }
 
+.leftcontents .menu .selected {
+    background-color: black;
+    color: #aaa;
+    padding: 1px 5px;
+}
+
+.leftcontents .menu .selected a {
+    opacity: 1;
+}
 
 .right {
     background: #eee;

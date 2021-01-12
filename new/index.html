@@ -9,7 +9,6 @@
 
     <script>
         function swap(page) {
-            document.getElementById("right").scrollTo(0,0);
 
             var sections = {
                 "#all":   [
@@ -37,9 +36,7 @@
             //console.log(sections);
 
             for(var sk in sections) {
-                sections[sk][1].style.padding="0px";
-                sections[sk][1].style.background="none";
-                sections[sk][1].style.color="black";
+                sections[sk][1].className="";
             }
 
             if(page == "#all" || page == "") {
@@ -47,26 +44,21 @@
                     sections[sk][0].style.display="unset";
                 }
 
-                sections["#all"][1].style.padding="0px 3px 0px 3px";
-                sections["#all"][1].style.background="black";
-                sections["#all"][1].style.color="#aaa";
-                return;
+                sections["#all"][1].className="selected";
+                
+            } else {
+
+                for(var sk in sections) {
+                    sections[sk][0].style.display="none";
+                }
+
+                var s = sections[page];
+                s[0].style.display="unset";
+                s[1].className="selected";
+            
             }
 
-            for(var sk in sections) {
-                sections[sk][0].style.display="none";
-                //console.log(sections[sk]);
-                sections[sk][1].style.padding="0px";
-                sections[sk][1].style.background="none";
-                sections[sk][1].style.color="black";
-            }
-
-            var s = sections[page];
-            s[0].style.display="unset";
-            s[1].style.padding="0px 3px 0px 3px";
-            s[1].style.background="black";
-            s[1].style.color="#aaa";
-
+            document.getElementById("right").scrollTo(0,0);
         }
     </script>
 </head>
@@ -152,18 +144,6 @@
                 </div>
             </div>
 
-            <!-- PATHTRACER -->
-            <div class="card" style="background: #ff7a7a; color: white;">
-                <div style="width: 43%; top: 20%; left: 46%; ">
-                    <img src="projects/pt.jpg">
-                </div>
-                <div style="width: 26%; top: -26%; left: 11%; ">
-                    <div><i>Path tracer</i> <br /> (<a href="https://github.com/giuliom95/pathtracer">Project page</a> - <a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>)</div>
-                    Monte Carlo pathtracer with direct+indirect light contribution splitting and a BVH to accelerate ray-scene intersection. Beside STL, it has only OpenEXR as dependency.
-                </div>
-            </div>
-
-
             <!-- ARDUINO MAYA -->
             <div class="card" style="background: #585a57; color: white;">
                 <div style="width: 53%; top: 15%; left: 8%;">
@@ -177,7 +157,6 @@
                     Software to make an Arduino board and a Maya session communicate. This can be particularly useful to create custom input devices.
                 </div>
             </div>
-
 
             <!-- DOODLE THE WORLD -->
             <div class="card" style="background: #ff7a7a; color: white;">
@@ -203,6 +182,17 @@
                 </div>
                 <div style="width: 88%; top: -27%; left: 6%; ">
                     <div><i>Normal maps baker</i> (<a href="https://github.com/giuliom95/baker">Project page</a> - <a href="https://twitter.com/giuliom95/status/1045004483779080195">Tweet</a>) &ensp; Written in C++ mainly to test Embree out.</div>
+                </div>
+            </div>
+
+            <!-- PATHTRACER -->
+            <div class="card" style="background: #ff7a7a; color: white;">
+                <div style="width: 43%; top: 20%; left: 46%; ">
+                    <img src="projects/pt.jpg">
+                </div>
+                <div style="width: 26%; top: -26%; left: 11%; ">
+                    <div><i>Path tracer</i> <br /> (<a href="https://github.com/giuliom95/pathtracer">Project page</a> - <a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>)</div>
+                    Monte Carlo pathtracer with direct+indirect light contribution splitting and a BVH to accelerate ray-scene intersection. Beside STL, it has only OpenEXR as dependency.
                 </div>
             </div>
         </div>
