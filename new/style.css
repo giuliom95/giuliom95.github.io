@@ -61,6 +61,7 @@ body {
     flex-direction: column;
     font-size: 20px;
     font-weight: 300;
+    padding-top: 10px;
 }
 
 .leftcontents .menu div {
@@ -123,7 +124,7 @@ body {
 
 @media screen and (max-width: 1150px) {
     :root {
-        --cm: calc(100vw - 18px);
+        --cm: calc(100vw - 60px);
     }
 
     body {
@@ -137,10 +138,5 @@ body {
     .right {
         min-height: unset;
         overflow-y: unset;
-        padding-left: 0px;
-    }
-
-    .card {
-        margin: 20px 0px 0px 0px;
     }
 }
