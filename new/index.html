@@ -235,7 +235,7 @@
             <!-- INTERNET -->
             <div class="card" style="background: black; color: white;">
                 <div style="width: 100%; top: 21%; left: 0%;">
-                    <video controls muted="muted">
+                    <video autoplay loop controls muted="muted">
                         <source src="./projects/internet.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -291,6 +291,19 @@
                 </div>
             </div>
 
+            <!-- JVC -->
+            <div class="card" style="background: #48484a; color: white;">
+                <div style="width: 88%; top: 27%; left: 5%;">
+                    <img src="projects/jvc.png">
+                </div>
+                <div style="width: 25%; top: 26%; left: 61%;">
+                    <div>
+                        <i>JVC A-K22</i> (<a href="https://twitter.com/giuliom95/status/1291437685538725890">Tweet</a>)
+                    </div>
+                    Maya and renderman.
+                </div>
+            </div>
+
             <!-- STRIPES -->
             <div class="card" style="background: #905fd7; color: white;">
                 <div style="width: 51%; top: 17%; left: 39%;">
@@ -305,7 +318,22 @@
             </div>
         </div>
 
+
+
         <div id="otherdiv">
+            <!-- IPOD CONTROL -->
+            <div class="card" style="background: #7078f7; color: white;">
+                <div style="width: 100%; top: 0%; left: 0%;">
+                    <img src="projects/ipod.png">
+                </div>
+                <div style="width: 28%; top: -82%; left: 14%;">
+                    <div>
+                        <i>iPod remote control</i>
+                    </div>
+                    Internet controlled iPod dock powered by a Raspberry Pi. User can play/pause, issue next/prev track commands and control the volume via TCP packets on a custom port. Volume regulation is done by a digital potentiometer.
+                </div>
+            </div>
+
             <!-- MUSIC PLAYER -->
             <div class="card" style="background: #32c6b8; color: black;">
                 <div style="width: 38%; top: 13%; left: 12%;">
@@ -316,6 +344,19 @@
                         <i>musicplayer.py</i>
                     </div>
                     Music player application that keeps the play-queue between sessions and resumes it from where it has been left, like iPods do. Written in Python 3 using PySide2, SQLite3, FFmpeg, and PyAudio. It lacks many features like scrubbing a library manager, but I still used it daily for a good while.
+                </div>
+            </div>
+
+            <!-- SUSTAIN PEDAL -->
+            <div class="card" style="background: #ff7a7a; color: white;">
+                <div style="width: 60%; top: 38%; left: 20%;">
+                    <img src="projects/pedal.jpg">
+                </div>
+                <div style="width: 71%; top: -32%; left: 15%; ">
+                    <div>
+                        <i>Programmable MIDI pedal</i> (<a href="https://gist.github.com/giuliom95/658421483a4a572629fe4079efdfdc3f">Code</a>)
+                    </div>
+                    An Arduino powered device that sends MIDI signals on foot pedal press. It can be setup to either play a C1 note (a bass drum in GM standard) or to send sustain messages (CC 64). Mode and channel can be selected on power up through jumpers.  
                 </div>
             </div>
 
