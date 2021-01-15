@@ -55,6 +55,22 @@ body {
     font-size: 45px;
 }
 
+.leftcontents .links {
+    padding-top: 6px;
+}
+
+.leftcontents .links a {
+    opacity: 1;
+}
+
+.leftcontents .links a:hover {
+    opacity: 0.5;
+}
+
+.leftcontents .links img{
+    width: 30px;
+}
+
 .leftcontents .menu {
     display: flex;
     align-items: flex-end;
