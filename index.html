@@ -1,433 +1,390 @@
 <html>
-	<head>
-		<link id="webfont_calluna" rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/calluna/stylesheet.css?v=3"/>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
-		<link rel="stylesheet" type="text/css" href="main.css">
+<head>
+    <link id="webfont_calluna" rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/calluna/stylesheet.css?v=3" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Giulio Martella</title>
 
-		<script>
-			function pause(element) {
-				var video = element.children.item(0).children.item(0);
-				video.pause();
-			}
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-			function play(element) {
-				var video = element.children.item(0).children.item(0).children.item(0);
-				video.play();
-			}
-		</script>
+    <script>
+        function swap(page) {
 
-		<title>Giulio Martella - Personal website</title>
-	</head>
-	<body>
-		<div class="title">
-			<div class="title-name">
-				Giulio Martella
-			</div>
-			<div class="title-right">
-				<div class="logos">
-					<a href="https://github.com/giuliom95">
-						<img src="./github.svg">
-					</a>
-					<a href="https://www.linkedin.com/in/giulio-martella-71a582123/">
-						<img src="./linkedin.svg">
-					</a>
-					<!--<a href=".">
-						<img src="./tumblr.svg">
-					</a>-->
-					<a href="https://twitter.com/giuliom95">
-						<img src="./twitter.svg">
-					</a>
-				</div>
-			</div>
-		</div>
+            var sections = {
+                "#all":   [
+                    document.getElementById("alldiv"), 
+                    document.getElementById("alllink")
+                ],
+                "#work":  [
+                    document.getElementById("workdiv"),
+                    document.getElementById("worklink")
+                ],
+                "#code":  [
+                    document.getElementById("codediv"),
+                    document.getElementById("codelink")
+                ],
+                "#art":   [
+                    document.getElementById("artdiv"),
+                    document.getElementById("artlink")
+                ],
+                "#other": [
+                    document.getElementById("otherdiv"),
+                    document.getElementById("otherlink")
+                ]
+            };
 
-		<!-- First column -->
-		<div class="column">
-			<div class="block about">
-				
-				<div class="blockcontent">
-					<div>
-						Hello, I am Giulio. I'm in love with animation and computer graphics.
-						I discovered my passion back in the summer of 2016 and since then 
-						I've been constantly working to improve my skills.
-					</div>
-					<div>
-						I am currently a Visual Computing Grad student at the 
-						<a href="https://www.uni-stuttgart.de/en/index.html">University of Stuttgart</a> and I spent 
-						an exchange semester at <a href="https://purdue.edu/">Purdue University</a>, majoring in Animation.
-						Before moving to Germany I have been an Assistant Technical Director at <a href="http://www.rbw-cgi.it/en/about-us">Rainbow CGI</a> for a few months. 
-						I also got a B.Sc. in Computer Engineering at <a href="http://www.uniroma3.it/en/">Roma Tre University</a>.
-					</div>
-					<div>
-						Check out <a href="./Giulio_Martella-2020-01-resume.pdf">my resume</a> for further information.
-					</div>
-				</div>
-			</div>
+            //console.log(sections);
 
-			<div class="block">
-				
-				<div class="blockcontent">
-					<img src="projects/istant_radiosity.jpg">
-				</div>
+            for(var sk in sections) {
+                sections[sk][1].className="";
+            }
 
-				<div class="description">
-					<div class="descriptiontitle">Instant Radiosity</div>
-					<div>
-						Modern interactive implementation of the 
-						<a href="https://kluedo.ub.uni-kl.de/files/4963/Keller_Instant%20radiosity.pdf">1997 "Instant Radiosity" paper</a> 
-						Presented as final project for the "Practical Course in Visual Computing" at the University of Stuttgart.
-						It uses <a href="https://www.vis.uni-stuttgart.de/projekte/ogl4core-framework">"OGL4Core Framework"</a>, 
-						an educational tool developed at the University which offers an easy interface to some OpenGL 4 functionalities.
-					</div>
-					<div>
-						A Naive Full Monte Carlo Path Tracer on a Compute Shader is used to displace the Virtual Point Lights.
-						Each VPL has its own shadow map stored into a cubemap texture array. Every shadow map is generated in just one render pass.
-					</div>
-					<div>
-						<a href="https://twitter.com/giuliom95/status/1094718338025046018">Tweet</a>
-					</div>
-				</div>
-			</div>
+            if(page == "#all" || page == "") {
+                for(var sk in sections) {
+                    sections[sk][0].style.display="unset";
+                }
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/exrviz.jpg">
-				</div>
-				<div class="description">
-					<div class="descriptiontitle">ExrViz</div>
-					<div>
-						An OpenEXR visualizer wrote in C++ and Qt5.
-					</div>
-					<div>
-						<a href="https://github.com/giuliom95/exrviz">Project page</a>
-					</div>
-				</div>
-			</div>
+                sections["#all"][1].className="selected";
+                
+            } else {
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/musicplayer.jpg">
-				</div>
-				<div class="description">
-					<div class="descriptiontitle">musicplayer.py</div>
-					<div>
-						I had the need of a music player application with a non-volatile play-queue.
-						In other words, a player which doesn't forget the play-queue between sessions 
-						and resumes it from where it has been left, like iPods do.
-						Also I love album covers and I wanted them displayed big.
-					</div>
-					<div>
-						So I just wrote one in Python 3 using PySide2, SQLite3, FFmpeg, and PyAudio.
-						It lacks many features 
-						-- like scrubbing and a GUI to manage the library, to name two -- 
-						but it satisfies my needs and I use it almost daily.
-					</div>
-				</div>
-			</div>
+                for(var sk in sections) {
+                    sections[sk][0].style.display="none";
+                }
 
-			<div class="block" onmouseleave="play(this)">
-				<div class="blockcontent" onmouseover="pause(this)">
-					<div class="videoBox">
-						<video loop autoplay muted="muted">
-							<source src="./projects/bunny.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</div>
+                var s = sections[page];
+                s[0].style.display="unset";
+                s[1].className="selected";
+            
+            }
 
-				<div class="description">
-					<div class="descriptiontitle">arduino-maya</div>
-					<div>
-						Software to make an Arduino board and a Maya session communicate.
-						This can be particularly useful to create custom input devices.
-					</div>
-					<div>
-						<a href="https://github.com/giuliom95/arduino-maya">Project page</a> -
-						<a href="https://twitter.com/giuliom_95/status/918938709814398976">Tweet</a>
-					</div>
-				</div>
-			</div>
+            document.getElementById("right").scrollTo(0,0);
+        }
+    </script>
+</head>
+<body onload="swap(location.hash)">
+    <div class="left">
+        <div class="leftcontents">
+            <div class="title">Giulio Martella</div>
+            <div class="links">
+                <a href="https://github.com/giuliom95">
+                    <img src="./github.svg">
+                </a>
+                <a href="https://www.linkedin.com/in/giulio-martella-71a582123/">
+                    <img src="./linkedin.svg">
+                </a>
+                <a href="https://twitter.com/giuliom95">
+                    <img src="./twitter.svg">
+                </a>
+                <a href="./Giulio_Martella-2021-01-resume.pdf">
+                    <img src="./cv.svg">
+                </a>
+            </div>
+            <div class="menu">
+                <div id="alllink"><a href="#all"   onclick="swap('#all')">Every project</a></div>
+                <div id="worklink"><a href="#work"  onclick="swap('#work')">Professional work</a></div>
+                <div id="codelink"><a href="#code"  onclick="swap('#code')">CG Code</a></div>
+                <div id="artlink"><a href="#art"   onclick="swap('#art')">CG Art</a></div>
+                <div id="otherlink"><a href="#other" onclick="swap('#other')">Others</a></div>
+            </div>
+        </div>
+    </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/hoverbike.jpg">
-				</div>
+    <div class="right" id="right">
 
-				<div class="description">
-					<div class="descriptiontitle">Hoverbike</div>
-					<div>
-						Personal project modeled in Maya. Rendered in Renderman.
-					</div>
-					<div>
-						<a href="https://twitter.com/giuliom_95/status/950124113506590726">Tweet</a>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div id="alldiv"></div>
 
-		<!-- Second column -->
-		<div class="column">
-			<div class="block" onmouseleave="play(this)">
-				<div class="blockcontent" onmouseover="pause(this)">
-					<div class="videoBox">
-						<video loop autoplay muted="muted">
-							<source src="./projects/animator.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</div>
-				<div class="description">
-					<div class="descriptiontitle">Animator</div>
-					<div>
-						Hand-drawn animation program with drawing tablet support, smooth stroking and onion skinning. 
-						It started as an OpenGL and Qt exercise.
-					</div>
-					<div>
-						<a href="https://github.com/giuliom95/animator">Project page</a> - 
-						<a href="https://twitter.com/search?f=tweets&vertical=default&q=%23digitaldrawing%20AND%20%23cg%20AND%20%23qt%20AND%20%23opengl%20from%3Agiuliom95">Tweets</a>
-					</div>
-				</div>
-			</div>
+        <div id="workdiv">
+            <!-- 44 CATS -->
+            <div class="card" style="background: #FDA83C; color: white;">
+                <div style="width: 51%; top: 11%; left: 13%;">
+                    <img src="./projects/lampo.png" />
+                </div>
+                <div style="width: 31%; top: -7%; left: 55%;">
+                    <div><i>44 Cats</i> <br> (<a href="https://www.rbw-cgi.it/en/serie-tv/44-cats/">Studio project page</a> - <a href="https://www.youtube.com/watch?v=RXDGXMiL3MQ">Clip</a>)</div>
+                    Preschool animated series I worked on as Assistant TD at <a href="https://www.rbw-cgi.it/en/">Rainbow CGI</a> before starting grad school.
+                </div>
+            </div>
+        </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/baker.jpg">
-				</div>
+        <div id="codediv">
+            <!-- ANIMATOR -->
+            <div class="card" style="background: #7078f7; color: white;">
+                <div style="width: 42%; top: 17%; left: 52%;">
+                    <video loop autoplay muted="muted">
+                        <source src="./projects/animator.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="width: 43%; top: -19%; left: 7%;">
+                    <div><i>Animator</i> (<a href="https://github.com/giuliom95/animator">Project page</a> - <a href="https://twitter.com/search?f=tweets&vertical=default&q=%23digitaldrawing%20AND%20%23cg%20AND%20%23qt%20AND%20%23opengl%20from%3Agiuliom95">Tweets</a>)</div>
+                    Hand-drawn animation program with drawing tablet support, smooth stroking and onion skinning. It started as an OpenGL and Qt exercise.
+                </div>
+            </div>
 
-				<div class="description">
-					<div class="descriptiontitle">Normal maps baker</div>
-					<div>Written in C++ mainly to test Embree out.</div>
-					<div>
-						<a href="https://github.com/giuliom95/baker">Project page</a> -
-						<a href="https://twitter.com/giuliom95/status/1045004483779080195">Tweet</a>
-					</div>
-				</div>
-			</div>
+            <!-- BSC THESIS -->
+            <div class="card" style="background: white;">
+                <div style="width: 58%; top: 2%; left: 0%; ">
+                    <img src="./projects/lar.jpg" />
+                </div>
+                <div style="width: 44%; top: -11%; left: 52%; ">
+                    <div><i>Bachelor thesis</i> (<a href="https://github.com/cvdlab/LARLIB.jl">Project page</a> - <a href="https://twitter.com/giuliom_95/status/924692912453152772">Tweet</a>)</div>
+                    A <a href="https://julialang.org/">Julia</a> implementation of an experimental geometric kernel capable of boolean operations on very complex 3D models. The system is based on <a href="http://paoluzzi.dia.uniroma3.it/web/pao/doc/gpm13-final.pdf">LAR</a>. This is the result of my work at the <a href="https://github.com/cvdlab/">Computational Visual Design Laboratory</a> of Roma Tre University.
+                </div>
+            </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/pt.jpg">
-				</div>
+            <!-- INSTANT RADIOSITY -->
+            <div class="card" style="background: #32c6b8;">
+                <div style="width: 29%; top: 8%; left: 48%;">
+                    <img src="./projects/istant_radiosity2.jpg" />
+                </div>
+                <div style="width: 32%; top: 13%; left: 59%;">
+                    <img src="./projects/istant_radiosity.png" />
+                </div>
+                <div style="width: 30%; top: -56%; left: 10%;">
+                    <div><i>Instant Radiosity</i> (<a href="https://twitter.com/giuliom95/status/1094718338025046018">Tweet</a>)</div>
+                    Modern interactive implementation of the <a href="https://kluedo.ub.uni-kl.de/files/4963/Keller_Instant%20radiosity.pdf">1997 "Instant Radiosity" paper</a> presented as final project for the "Practical Course in Visual Computing" at the University of Stuttgart. A Naive Full Monte Carlo Path Tracer on a Compute Shader is used to displace the Virtual Point Lights. Each one has its own shadow map stored into a cubemap texture array. All shadow maps are generated in one render pass.
+                </div>
+            </div>
 
-				<div class="description">
-					<div class="descriptiontitle">Path tracer</div>
-					<div>
-						Monte Carlo pathtracer with direct+indirect light contribution splitting and a BVH to accelerate ray-scene intersection. Beside STL, it has only OpenEXR as dependency. 
-					</div>
-					<div>
-						<a href="https://github.com/giuliom95/pathtracer">Project page</a> -
-						<a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>
-					</div>
-				</div>
-			</div>
+            <!-- EXRVIZ -->
+            <div class="card" style="background: #8cc473;">
+                <div style="width: 36%; top: 7%; left: 7%;">
+                    <img src="projects/exrviz3.png">
+                </div>
+                <div style="width: 36%; top: -27%; left: 15%;">
+                    <img src="projects/exrviz2.png">
+                </div>
+                <div style="width: 36%; top: -59%; left: 23%;">
+                    <img src="projects/exrviz1.png">
+                </div>
+                <div style="width: 27%; top: -130%; left: 65%; ">
+                    <div><i>ExrViz</i> (<a href="https://github.com/giuliom95/exrviz">Project page</a>)</div>
+                    An OpenEXR visualizer written in C++ and Qt5.
+                </div>
+            </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/cdplayer.jpg">
-				</div>
+            <!-- ARDUINO MAYA -->
+            <div class="card" style="background: #585a57; color: white;">
+                <div style="width: 53%; top: 15%; left: 8%;">
+                    <video loop autoplay muted="muted">
+                        <source src="./projects/bunny.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="width: 32%; top: -32%; left: 64%;">
+                    <div><i>arduino-maya</i> <br />(<a href="https://github.com/giuliom95/arduino-maya">Project page</a> - <a href="https://twitter.com/giuliom_95/status/918938709814398976">Tweet</a>)</div>
+                    Software to make an Arduino board and a Maya session communicate. This can be particularly useful to create custom input devices.
+                </div>
+            </div>
 
-				<div class="description">
-					<div class="descriptiontitle">CD audio player</div>
-					<div>
-						A CD-DA player done using a Raspberry Pi 3 Model B+, an USB2 CD drive and an SPI audio interface.
-						The software has been written in Python 3 and relies on cdparanoia for ripping.
-					</div>
-					<div>
-						The program has been integrated in Raspbian as an enabled Systemd unit 
-						so it runs at boot as a service. 
-						The Pi has been tweaked to consume as less power as possible to leave power for the CD drive.
-					</div>
-				</div>
-			</div>
+            <!-- DOODLE THE WORLD -->
+            <div class="card" style="background: #ff7a7a; color: white;">
+                <div style="height: 100%; top: 0%; left: 0%;">
+                    <img src="projects/doodletheworldleft.jpg" style="height: 100%; width: unset;">
+                </div>
+                <div style="height: 100%; top: -100%; left: 63%; width: 10%;">
+                    <img src="projects/doodletheworldright.jpg" style="height: 100%; width: unset;">
+                </div>
+                <div style="width: 23%; top: -196%; left: 38%;">
+                    <div><i>Doodle The World</i></div>
+                    Augmented Reality project done for the VR/AR course at the University of Stuttgart in team with <a href="https://www.linkedin.com/in/anastasia-dzamashvili/">Anastasia Dzamashvili</a> and <a href="https://www.linkedin.com/in/jad-maalouly-896430176/">Jad Maalouly</a>. The app lets you draw multi-colored 3D doodles in AR and then store them on a public server. The doodles will stay in the same physical spot even if an another user scouts the same place with his own device. The idea was basically allowing users to create virtual graffitis on the real world. Unity, Google ARCore and Flask have been used to create all the software pieces involved.
+                </div>
+            </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/rt.jpg">
-				</div>
+            <!-- BAKER -->
+            <div class="card" style="background: white;">
+                <div style="width: 70%; top: 6%; left: 15%;">
+                    <img src="projects/bakertop.jpg">
+                </div>
+                <div style="width: 70%; top: 21%; left: 15%;">
+                    <img src="projects/bakerbottom.jpg">
+                </div>
+                <div style="width: 88%; top: -27%; left: 6%; ">
+                    <div><i>Normal maps baker</i> (<a href="https://github.com/giuliom95/baker">Project page</a> - <a href="https://twitter.com/giuliom95/status/1045004483779080195">Tweet</a>) &ensp; Written in C++ mainly to test Embree out.</div>
+                </div>
+            </div>
 
-				<div class="description">
-					<div class="descriptiontitle">Raytracer</div>
-					<div>
-						Barebone ray tracer with shadow rays. One of my first projects in C++.
-					</div>
-					<div>
-						<a href="https://github.com/giuliom95/rt">Project page</a> -
-						<a href="https://twitter.com/giuliom_95/status/911552940074299393">Tweet #1</a> - 
-						<a href="https://twitter.com/giuliom_95/status/903986604687187968">Tweet #2</a>
-					</div>
-				</div>
-			</div>
-			
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/chiatta.jpg">
-				</div>
+            <!-- PATHTRACER -->
+            <div class="card" style="background: #ff7a7a; color: white;">
+                <div style="width: 43%; top: 20%; left: 46%; ">
+                    <img src="projects/pt.jpg">
+                </div>
+                <div style="width: 26%; top: -26%; left: 11%; ">
+                    <div><i>Path tracer</i> <br /> (<a href="https://github.com/giuliom95/pathtracer">Project page</a> - <a href="https://twitter.com/giuliom_95/status/960269640197988359">Tweet</a>)</div>
+                    Monte Carlo pathtracer with direct+indirect light contribution splitting and a BVH to accelerate ray-scene intersection. Beside STL, it has only OpenEXR as dependency.
+                </div>
+            </div>
+        </div>
 
-				<div class="description">
-					<div class="descriptiontitle">Chiatta Zero-G</div>
-					<div>
-						Modeled in Maya after a Moebius drawing. The first "complex" modeling project I made.
-					</div>
-					<div>
-						<a href="https://twitter.com/giuliom_95/status/891753721746653186">Tweet #1</a> -
-						<a href="https://twitter.com/giuliom_95/status/848251669171326977">Tweet #2</a>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div id="artdiv">
+            <!-- CGT 247 -->
+            <div class="card" style="background: black; color: white;">
+                <div style="width: 100%; top: 0%; left: 0%;">
+                    <video loop autoplay muted="muted">
+                        <source src="./projects/bass.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="width: 90%; top: 6%; left: 5%;">
+                    <div><i>Purdue CGT 247 Final project</i> (<a href="https://vimeo.com/386527949">Vimeo</a>)</div>
+                    Final project for the "VFX: Particles and Procedural FX" course at Purdue University. Credits to <a href="https://www.linkedin.com/in/charles-feng-b2410617b/">Charles Feng</a> for the bass model. Everything but that has been made by me. Hands and bass made in Maya. Smoke FX and rendering done in Houdini, compositing in Nuke.
+                </div>
+            </div>
+
+            <!-- DUMPLINGS -->
+            <div class="card" style="background: #7078f7; color: white;">
+                <div style="width: 100%; top: 0%; left: 0%;">
+                    <img src="projects/dumplings.jpg">
+                </div>
+                <div style="width: 43%; top: -96%; left: 3%;">
+                    <div><i>Dumplings</i> (<a href="https://twitter.com/giuliom_95/status/973297857557037058">Tweet</a>)</div>
+                    Maya, Renderman, and Nuke.
+                </div>
+            </div>
+
+            <!-- INTERNET -->
+            <div class="card" style="background: black; color: white;">
+                <div style="width: 100%; top: 21%; left: 0%;">
+                    <video autoplay loop controls muted="muted">
+                        <source src="./projects/internet.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="width: 83%; top: -47%; left: 9%;">
+                    <div><i>Internet - Animated short</i> (<a href="https://vimeo.com/giuliom95/internet">Vimeo</a> - <a href="https://twitter.com/giuliom95/status/1025087287275782144">Tweet</a>)</div>
+                </div>
+                <div style="width: 83%; top: 26%; left: 9%;">
+                    A short animated movie I made in 10 days. Made with Maya, Renderman, and Nuke.
+                </div>
+            </div>
 
 
-		<!-- Third column -->
-		<div class="column">
+            <!-- HOVERBIKE -->
+            <div class="card" style="background: #7078f7; color: white;">
+                <div style="width: 62%; top: 4%; left: 10%;">
+                    <img src="projects/hoverbike.png">
+                </div>
+                <div style="width: 25%; top: -5%; left: 58%;">
+                    <div><i>Hoverbike</i> (<a href="https://twitter.com/giuliom_95/status/950124113506590726">Tweet</a>)</div>
+                    Maya and Renderman.
+                </div>
+            </div>
 
-			<div class="block" onmouseleave="play(this)">
-				<div class="blockcontent" onmouseover="pause(this)">
-					<div class="videoBox">
-						<video loop autoplay muted="muted">
-							<source src="./projects/bass.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</div>
 
-				<div class="description">
-					<div class="descriptiontitle">Purdue CGT 247 Final project</div>
-					<div>
-						Final project for the "VFX: Particles and Procedural FX" course at Purdue University.
-						Credits to <a href="https://www.linkedin.com/in/charles-feng-b2410617b/">Charles Feng</a> 
-						for the bass model. Everything but that has been made by me.
-						Hands and bass made in Maya. Smoke FX and rendering done in Houdini, compositing in Nuke.
-					</div>
-					<div>
-						<a href="https://vimeo.com/386527949">Vimeo</a>
-					</div>
-				</div>
-			</div>
+            <!-- CACTUS -->
+            <div class="card" style="background: url(./projects/cactusbg.jpg); background-size: contain; color: white;">
+                <div style="width: 51%; top: 17%; left: 39%;">
+                    <video loop autoplay muted="muted">
+                        <source src="./projects/cactus.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="width: 19%; top: -34%; left: 15%;">
+                    <div>
+                        <i>Happy Cactus</i> (<a href="https://twitter.com/giuliom_95/status/860947190302339073">Tweet #1</a> - <a href="https://twitter.com/giuliom_95/status/860242784174972930">Tweet #2</a> - <a href="https://twitter.com/giuliom_95/status/858795456507334657">Tweet #3</a>)
+                    </div>
+                    Maya, Renderman, and Nuke. The spikes have been displaced via scripting (PyMEL).
+                </div>
+            </div>
 
-			<div class="block" onmouseleave="play(this)">
-				<div class="blockcontent" onmouseover="pause(this)">
-					<div class="videoBox">
-						<video loop autoplay muted="muted">
-							<source src="./projects/internet.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</div>
+            <!-- CHIATTA -->
+            <div class="card" style="background: #7078f7; color: white;">
+                <div style="width: 100%; top: 0%; left: 0%; ">
+                    <img src="projects/chiatta.jpg">
+                </div>
+                <div style="width: 46%; top: -85%; left: 8%;">
+                    <div>
+                        <i>Chiatta Zero-G</i> (<a href="https://twitter.com/giuliom_95/status/891753721746653186">Tweet #1</a> -
+                        <a href="https://twitter.com/giuliom_95/status/848251669171326977">Tweet #2</a>)
+                    </div>
+                    Modeled in Maya after a Moebius drawing. The first "complex" modeling project I made.
+                </div>
+            </div>
 
-				<div class="description">
-					<div class="descriptiontitle">Internet - Animated short</div>
-					<div>
-						A short animated movie I made in 10 days.
-					</div>
-					<div>
-						Made with Maya, Renderman and Nuke.
-					</div>
-					<div>
-						<a href="https://vimeo.com/giuliom95/internet">Vimeo</a> -
-						<a href="https://twitter.com/giuliom95/status/1025087287275782144">Tweet</a>
-					</div>
-				</div>
-			</div>
+            <!-- JVC -->
+            <div class="card" style="background: #48484a; color: white;">
+                <div style="width: 88%; top: 27%; left: 5%;">
+                    <img src="projects/jvc.png">
+                </div>
+                <div style="width: 25%; top: 26%; left: 61%;">
+                    <div>
+                        <i>JVC A-K22</i> (<a href="https://twitter.com/giuliom95/status/1291437685538725890">Tweet</a>)
+                    </div>
+                    Maya and renderman.
+                </div>
+            </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/doodletheworld.jpg">
-				</div>
+            <!-- STRIPES -->
+            <div class="card" style="background: #905fd7; color: white;">
+                <div style="width: 51%; top: 17%; left: 39%;">
+                    <img src="projects/stripes.jpg">
+                </div>
+                <div style="width: 18%; top: -31%; left: 12%;">
+                    <div>
+                        <i>maya-stripes</i> (<a href="https://github.com/giuliom95/maya-stripes">Project page</a>)
+                    </div>
+                    A Maya plugin to model several parallel paper stripes imitating the <a href="https://www.google.com/search?q=alberto+biasi+politipo&tbm=isch">work of Alberto Biasi</a>.
+                </div>
+            </div>
+        </div>
 
-				<div class="description">
-					<div class="descriptiontitle">Doodle The World</div>
-					<div>
-						Augmented Reality project done for the VR/AR course at the University of Stuttgart in team with
-						<a href="https://www.linkedin.com/in/anastasia-dzamashvili/">Anastasia Dzamashvili</a> and 
-						<a href="https://www.linkedin.com/in/jad-maalouly-896430176/">Jad Maalouly</a>. 
-					</div>
-					<div>
-						The app lets you draw multi-colored 3D doodles in AR and then store them on a public server. 
-						The doodles will stay in the same physical spot even if an another user scouts the same place with his own device.
-						The idea was basically allowing users to create virtual graffitis on the real world.
-					</div>
-					<div>
-						Unity, Google ARCore and Flask have been used to create all the software pieces involved.
-					</div>
-				</div>
-			</div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/lar.jpg">
-				</div>
 
-				<div class="description">
-					<div class="descriptiontitle">Bachelor thesis</div>
-					<div>
-						A <a href="https://julialang.org/">Julia</a> implementation of a
-						sperimental geometric kernel capable of boolean operations on very complex
-						3D models. The system is based on 
-						<a href="http://paoluzzi.dia.uniroma3.it/web/pao/doc/gpm13-final.pdf">LAR</a>.
-						This is the result of my work at the 
-						<a href="https://github.com/cvdlab/">Computational Visual Design Laboratory</a>
-						of Roma Tre University.
-					</div>
-					<div>
-						<a href="https://github.com/cvdlab/LARLIB.jl">Project page</a> -
-						<a href="https://twitter.com/giuliom_95/status/924692912453152772">Tweet</a>
-					</div>
-				</div>
-			</div>
+        <div id="otherdiv">
+            <!-- IPOD CONTROL -->
+            <div class="card" style="background: #7078f7; color: white;">
+                <div style="width: 100%; top: 0%; left: 0%;">
+                    <img src="projects/ipod.png">
+                </div>
+                <div style="width: 28%; top: -82%; left: 14%;">
+                    <div>
+                        <i>iPod remote control</i>
+                    </div>
+                    Internet controlled iPod dock powered by a Raspberry Pi. User can play/pause, issue next/prev track commands and control the volume via TCP packets on a custom port. Volume regulation is done by a digital potentiometer.
+                </div>
+            </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/dumplings.jpg">
-				</div>
-				<div class="description">
-					<div class="descriptiontitle">Dumplings</div>
-					<div>Modeling, surfacing and lighting done in Maya. Rendered with Renderman. Some color correction and depth of field effect done on Nuke.</div>
-					<div>
-						<a href="https://twitter.com/giuliom_95/status/973297857557037058">Tweet</a>
-					</div>
-				</div>
-			</div>
+            <!-- MUSIC PLAYER -->
+            <div class="card" style="background: #32c6b8; color: black;">
+                <div style="width: 38%; top: 13%; left: 12%;">
+                    <img src="projects/musicplayer.png">
+                </div>
+                <div style="width: 25%; top: -47%; left: 61%;">
+                    <div>
+                        <i>musicplayer.py</i>
+                    </div>
+                    Music player application that keeps the play-queue between sessions and resumes it from where it has been left, like iPods do. Written in Python 3 using PySide2, SQLite3, FFmpeg, and PyAudio. It lacks many features like scrubbing a library manager, but I still used it daily for a good while.
+                </div>
+            </div>
 
-			<div class="block" onmouseleave="play(this)">
-				<div class="blockcontent" onmouseover="pause(this)">
-					<div class="videoBox">
-						<video loop autoplay muted="muted">
-							<source src="./projects/cactus.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</div>
+            <!-- SUSTAIN PEDAL -->
+            <div class="card" style="background: #ff7a7a; color: white;">
+                <div style="width: 60%; top: 38%; left: 20%;">
+                    <img src="projects/pedal.jpg">
+                </div>
+                <div style="width: 71%; top: -32%; left: 15%; ">
+                    <div>
+                        <i>Programmable MIDI pedal</i> (<a href="https://gist.github.com/giuliom95/658421483a4a572629fe4079efdfdc3f">Code</a>)
+                    </div>
+                    An Arduino powered device that sends MIDI signals on foot pedal press. It can be setup to either play a C1 note (a bass drum in GM standard) or to send sustain messages (CC 64). Mode and channel can be selected on power up through jumpers.  
+                </div>
+            </div>
 
-				<div class="description">
-					<div class="descriptiontitle">Happy Cactus</div>
-					<div>
-						Loop done from scratch in Maya. The spikes have been displaced via scripting (PyMEL). Rendered in Renderman then composited in Nuke.
-					</div>
-					<div>
-						<a href="https://twitter.com/giuliom_95/status/860947190302339073">Tweet #1</a> -
-						<a href="https://twitter.com/giuliom_95/status/860242784174972930">Tweet #2</a> -
-						<a href="https://twitter.com/giuliom_95/status/858795456507334657">Tweet #3</a> 
-					</div>
-				</div>
-			</div>
+            <!-- CD PLAYER -->
+            <div class="card" style="background: #8cc473; color: black;">
+                <div style="width: 60%; top: 8%; left: 20%;">
+                    <img src="projects/cdplayer.jpg">
+                </div>
+                <div style="width: 80%; top: 13%; left: 11%; ">
+                    <div>
+                        <i>CD audio player</i>
+                    </div>
+                    A CD-DA player done using a Raspberry Pi 3 Model B+, an USB2 CD drive and an SPI audio interface. The software has been written in Python 3 and relies on cdparanoia for ripping. The program has been integrated in Raspbian as an enabled Systemd unit so it runs at boot as a service. The Pi has been tweaked to consume as less power as possible to leave it for the CD drive.
+                </div>
+            </div>
+        </div>
 
-			<div class="block">
-				<div class="blockcontent">
-					<img src="projects/stripes.jpg">
-				</div>
-
-				<div class="description">
-					<div class="descriptiontitle">maya-stripes</div>
-					<div>
-						A Maya plugin to model many parallel paper stripes imitating
-						the <a href="https://www.google.com/search?q=alberto+biasi+politipo&tbm=isch">
-						work of Alberto Biasi</a>
-					</div>
-					<div>
-						<a href="https://github.com/giuliom95/maya-stripes">Project page</a><br>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+    </div>
+</body>
 </html>
